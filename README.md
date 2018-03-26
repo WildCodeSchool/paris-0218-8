@@ -9,7 +9,7 @@ This Project was free to choose, but focus on back-end developement.
 # Instruction given :
 This website allows you to organize or participate to game play (board games, casino games,role player), wherever you are, to create a real community of players.
 
-#Guidelines
+**#Guidelines**
 
 - group 4 persons (random)
 - scrum/agile (1 week sprints)
@@ -22,7 +22,7 @@ This website allows you to organize or participate to game play (board games, ca
 - user authentication & roles
 - admin interface (CRUD)
 
-#About us
+**#About us**
 
 Members of the project : Nadia Djellali, Pany Soukaloun, Smain Khaldi, Valéry Chin
 

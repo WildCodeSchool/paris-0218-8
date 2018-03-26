@@ -1,7 +1,7 @@
 Projet 20/03/18 -> 02/05/18   ---Game Society---
 
 # About the project
--Second project at the Wild code School Paris.
+Second project at the Wild code School Paris.
 
 # Subject
 This Project was free to choose, but focus on back-end developement.
@@ -11,16 +11,16 @@ This website allows you to organize or participate to game play (board games, ca
 
 #Guidelines
 
--  group 4 persons (random)
--  scrum/agile (1 week sprints)
--  git workflow / github
--  backend API (nodeJS)
--  database (mySQL)
--  routing (express)
--  frontend (github pages)
--  responsive
--  user authentication & roles
--  admin interface (CRUD)
+-   group 4 persons (random)
+-   scrum/agile (1 week sprints)
+-   git workflow / github
+-   backend API (nodeJS)
+-   database (mySQL)
+-   routing (express)
+-   frontend (github pages)
+-   responsive
+-   user authentication & roles
+-   admin interface (CRUD)
 
 #About us
 

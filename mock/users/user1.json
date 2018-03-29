@@ -4,10 +4,6 @@
 "name": "Bobby",
 "profil": "Hi ! Here's a useless description",
 "mail address": "maytheforcebewithme@gmail.com",
-<<<<<<< HEAD:mock/users/user.json
 "Number of plays": 5
 }
-=======
-"Number of plays": 5,
-}
->>>>>>> 5df2071038b9dfc74aacc33ab370b136dee41186:mock/users/user1.json
+

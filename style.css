@@ -107,15 +107,27 @@ h1 {
 	font-size: 22px;
 }
 
-.stars {
-	display: flex;
-	justify-content: center;
+.rating {
+direction: rtl;
+
 }
 
-.starsimg {
-	width: 26px;
-	height: auto;
-}
+.rating a {
+color:#AAA;
+text-decoration: none;
+font-size: 2em;
+transition: color .4s;
+margin: 1px;
+padding-left: 5px;}
+
+.rating a:hover,
+.rating a:focus,
+.rating a:hover ~ a,
+.rating a:focus ~ a {
+color: orange;
+cursor: pointer;
+} 
+
 
 .arrow {
 	margin:40px;

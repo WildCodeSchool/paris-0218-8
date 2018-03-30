@@ -1,0 +1,166 @@
+.nav-ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color:black;
+	text-align: right;
+	padding-top: 8px;
+}
+
+.nav-li {
+	display: inline;
+}
+
+.nav-li a {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight:800;
+}
+
+.nav-li a:hover {
+	background-color:#2C353F;
+}
+
+nav img {
+	float: left;
+	margin-left: 20px;
+}
+
+.entete	{
+    margin-top: 10px;
+    border-radius: 5px;
+    background: url('https://i1.wp.com/gusandco.net/wp-content/uploads/2015/08/unepic-pc-role-playing-game-1.jpg?resize=652%2C540&ssl=1') no-repeat;
+    position: relative;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 77%;
+}
+
+h1 {
+	text-align: center;
+}
+
+#conteneur {
+    display: flex;
+	justify-content: space-around;
+}
+
+.element {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	border: solid 1px ;
+	padding: 10px;
+}
+
+.describe {
+	font-weight: 100;
+}
+
+.containeur {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.adepte {
+	display: inline-flex;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 150px;
+	height: 150px;
+	border-radius:50%; 
+	margin: 15px;
+
+}
+
+#adepte1 {
+	background-image: url("https://media.licdn.com/dms/image/C5603AQEXd129JzCBAA/profile-displayphoto-shrink_200_200/0?e=1527444000&v=alpha&t=56WCqh3cC_vovoxyhtdc3VI5RCR0z9LZX-WBIbpYCzA");
+}
+
+#adepte2 {
+	background-image: url("https://wildcodeschool.fr/wp-content/uploads/2018/02/Abdou-292x350.jpg");
+}
+
+#adepte3 {
+	background-image: url("http://i.ytimg.com/vi/qmTBfn53lSk/mqdefault.jpg");
+}
+
+#adepte4 {
+    background-image: url("https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-1/c0.160.960.960/p960x960/26198046_1717187221645789_2736583602130109904_o.jpg?_nc_cat=0&oh=d9e472a15a8601ce643fcb286464b23c&oe=5B38BF00");
+}
+
+#adepte5 {
+    background-image: url("http://static8.viadeo-static.com/tPF_kgF9zMDK2cKef3p1Uk4fJwo=/300x300/member/002eo943ni6uh49?ts=1483351754000");
+}
+
+.name {
+	text-align: center;
+	font-weight: 900;
+	font-size: 22px;
+}
+
+.rating {
+direction: rtl;
+
+}
+
+.rating a {
+color:#AAA;
+text-decoration: none;
+font-size: 2em;
+transition: color .4s;
+margin: 1px;
+padding-left: 5px;}
+
+.rating a:hover,
+.rating a:focus,
+.rating a:hover ~ a,
+.rating a:focus ~ a {
+color: orange;
+cursor: pointer;
+} 
+
+
+.arrow {
+	margin:40px;
+}
+
+footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   height: 50px;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: left;
+   padding-left: 20px; 
+   font-size : 20px;
+   display: flex;
+   align-items: center;
+
+}
+.copyright {
+	height:24px;
+	margin-top: 10px;
+}
+
+.listfooter {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.elemlist {
+	display: inline-flex;
+
+    margin:4px;
+}

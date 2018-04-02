@@ -12,11 +12,17 @@ const users = [
 	user4,
 	user5,
 	]
-console.log(users)
+
+//console.log(users)
 const app = express()
 
 app.get('/', (request, response) => {
 	response.send('OK')
 })
+
+app.get('/users', (request, response) => {
+	response.json(users)
+})
+
 
 app.listen(8080, () => console.log('Listening to 8080 port'))

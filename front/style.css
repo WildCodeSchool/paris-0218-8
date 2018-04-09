@@ -33,35 +33,46 @@ nav img {
 	margin-left: 20px;
 }
 
-
 /* Carrousel */
 
-.num1 img {
-	margin-top: 70px;
-}
-
-.num1 img {
-	height: 
+#slider {
+	width: 100%;
 	overflow: hidden;
 }
 
-
-.legende {
-	opacity: 1;
-	position: absolute;
-	top: 80%;
-	left: 50%;
-	width: 70%;
-	padding: 5px;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	/*background-color: black;*/
-	font-size: 3em;
-	text-align: center; color: white;
-	/*border-radius: 5px;*/
+#slider figure img {
+	width: 20%;
+	height: auto;
+	float: left;
 }
 
 
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  padding: 0;
+  animation: 25s slide infinite;
+}
+
+
+@keyframes slide {
+	0% {left: 0%;}
+ 	20% { left: 0%; }
+ 	25% { left: -100%; }
+ 	45% { left: -100%; }
+ 	50% { left: -200%; }
+ 	70% { left: -200%; }
+ 	75% { left: -300%; }
+ 	95% { left: -300%; }
+  	100% { left: -400%; }
+}
+
+.legende {
+	position: absolute;
+	font-size: 30px;
+	margin-top: 250px;
+}
 
 /* Adeptes */
 
@@ -130,24 +141,21 @@ nav img {
 }
 
 
-body {
-	background-color: white;
-}
-
-p {
-	font-size: 2em; color: black;
-
-}
-
-
 
 /* Concept */
+
 #concept {
-	height: 400px;
-	width: 400px;
-	border-radius: 10px;
-	background-color: radial-gradient, rgba(69,28,84,.8),rgba(69,28,84,0));
-	background-color: pink;
+    background: radial-gradient(circle, #0A8893, #11555B);
+    height: 400px;
+    width: 1000px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 15%;
+
+
+
+}
+
 
 
 
@@ -185,3 +193,4 @@ footer {
 
     margin:4px;
 }
+

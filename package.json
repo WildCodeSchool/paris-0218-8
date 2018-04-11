@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "dependencies": {
+    "htmllint-cli": "0.0.6",
+    "http-server": "^0.11.1",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+    "lint:css": "stylelint 'client/style/**/*.css'",
+    "lint:html": "htmllint 'client/**/*.html'",
+    "lint:js": "standard",
+    "nodemon": "^1.17.3",
+    "server": "nodemon server --ignore client",
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.1",
+    "stylelint": "^9.2.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "test": "echo 'no tests'",
+    "client": "http-server client"
+  }
+}

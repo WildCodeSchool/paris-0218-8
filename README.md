@@ -28,7 +28,8 @@ Members of the project : Nadia Djellali, Pany Soukaloun, Smain Khaldi, Valéry C
 
 Name of the team  : The loop4
 
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Travis master](https://img.shields.io/travis/WildCodeSchool/paris-0218-loop-4.svg)](https://travis-ci.org/WildCodeSchool/paris-0218-loop-4)
 [![Travis dev](https://img.shields.io/travis/WildCodeSchool/paris-0218-loop-4/dev.svg)](https://travis-ci.org/WildCodeSchool/paris-0218-loop-4/branches)
+

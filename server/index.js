@@ -11,18 +11,16 @@ const users = [
   user2,
   user3,
   user4,
-  user5,
+  user5
 ]
 
-//console.log(users)
 const app = express()
 
-app.use((request, response, next) => { 
+app.use((request, response, next) => {
   response.header('Access-Control-Allow-Origin', '*')
   response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
-
 
 app.get('/', (request, response) => {
   response.send('OK')
@@ -31,6 +29,5 @@ app.get('/', (request, response) => {
 app.get('/users', (request, response) => {
   response.json(users)
 })
-
 
 app.listen(8080, () => console.log('Listening to 8080 port'))

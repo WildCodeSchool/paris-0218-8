@@ -1,6 +1,6 @@
 /* Navabar */
 
-.nav-ul {
+.nav_ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0px;
@@ -10,11 +10,11 @@
 	padding-top: 0;
 }
 
-.nav-li {
+.nav_li {
 	display: inline;
 }
 
-.nav-li a {
+.nav_li a {
 	display: inline-block;
 	color: white;
 	text-align: center;
@@ -24,7 +24,7 @@
 	font-weight:800;
 }
 
-.nav-li a:hover {
+.nav_li a:hover {
 	background-color:#2C353F;
 }
 
@@ -89,7 +89,7 @@ nav img {
 	background-size: cover;
 	width: 150px;
 	height: 150px;
-	border-radius:50%; 
+	border-radius:50%;
 	margin: 25px;
 
 }
@@ -170,7 +170,7 @@ footer {
    background-color: black;
    color: white;
    text-align: left;
-   padding-left: 20px; 
+   padding-left: 20px;
    font-size : 20px;
    display: flex;
    align-items: center;

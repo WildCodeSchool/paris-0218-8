@@ -1,0 +1,11 @@
+const displayUser = user => {
+	return `
+   <div class='user'> 
+    <h2>${user.name}</h2>
+    <p>${user.profil}</p>
+    <p>${user.mailaddress}</p>
+    <p>${user.numberofplays}</p>
+  </div>
+`
+}
+

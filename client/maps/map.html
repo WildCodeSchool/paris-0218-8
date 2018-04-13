@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>page Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="map.css"> 
+  </head>
+  <body>
+    
+    <!-- début de la Navbar -->
+    <header>
+      <nav>
+        <ul class="nav_ul">
+          <li class="nav_li"><img src="Logo_Game_Society.jpg" height="70" width="70" alt="logo"></li>
+          <li class="nav_li"><a class="active" href="#game">Les jeux</a></li>
+          <li class="nav_li"><a href="#news">La communauté</a></li>
+          <li class="nav_li"><a href="#Aide">Aide</a></li>
+          <li class="nav_li"><a href="#Apropos">A propos</a></li>
+        </ul>
+      </nav>
+     </header>
+      <!-- fin de la Navbar-->
+    <section>
+       <ul class="navMap">
+          <li class="navMap"><a href="#jeuxSociete">Jeux de Société</a></li>
+          <li class="navMap"><a href="#geek">Geek</a></li>
+          <li class="navMap"><a href="casino">Casino</a></li>
+        </ul>
+    </section>
+
+      <div id="map"></div>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0ahTokK3oEcltu2S3gbGrvUIHMxIotVc&callback=initMap"></script>
+      <script src="map.js"></script>
+    </body>
+  </html>

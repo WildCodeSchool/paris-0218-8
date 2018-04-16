@@ -30,4 +30,14 @@ app.get('/users', (request, response) => {
   response.json(users)
 })
 
+app.get('/users/:id', (request, response) => {
+  const id = Number(request.params.id)
+
+  const user = users.find(user => user.id === id)
+  
+  //console.log('fetching profile',id, user)
+  response.json(user)
+
+})
+
 app.listen(8080, () => console.log('Listening to 8080 port'))

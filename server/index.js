@@ -1,6 +1,11 @@
 const express = require('express')
 const fs = require('fs')
+const util = require('util')
 const path = require ('path')
+
+const readFile = util.promisify(fs.readFile)
+const readdir = util.promisify(fs.readdir)
+
 
 const user1 = require('./mock/users/user1.json')
 const user2 = require('./mock/users/user2.json')
@@ -28,21 +33,49 @@ app.get('/', (request, response) => {
 })
 
 app.get('/users', (request, response) => {
-  response.json(users)
+  const usersDir = path.join(__dirname, './mock/users/')
+  readdir(usersDir)
+  .then(files => {
+    const filepaths = files.map(file => path.join(usersDir, file))
+
+    const allFiles = filepaths.map( filepath =>{ 
+      return readFile(filepath, 'utf8')
 })
+
+  Promise.all(allFiles)
+  	.then(allFilesValues => {
+  		console.log(allFilesValues)
+  		const valuesInJson = allFilesValues.map(JSON.parse)
+  		console.log(valuesInJson)
+  		response.json(valuesInJson)
+  	})
+  	.catch(err =>{
+  		response.status(500).end(err.message)
+  	})
+
+})
+  response.json(users)
+
+})
+
+
+
+
 
 app.get('/users/:id', (request, response) => {
 	const filename = `user${request.params.id}.json`
 	const filepath = path.join(__dirname, './mock/users/', filename)
 	console.log({ filename, filepath })
-	fs.readFile(filepath, 'utf8', (err, data) => {
-		if (err) {
-			return response.status(404).end('user not found')
-		}
-
-		response.header ('Content-type', 'application/json, charset=utf-8')
+	
+	const currentReadfile = readFile(filepath) 
+		currentReadfile.then(data => {
+		response.header ('Content-type', 'application/json; charset=utf-8')
 		response.end(data)
+	  })
+		currentReadfile.catch(err => {
+			response.status(404).end('user not found')
+		})
+
 	})
-})
 
 app.listen(8080, () => console.log('Listening to 8080 port'))

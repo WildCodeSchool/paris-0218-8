@@ -61,9 +61,9 @@ app.post('/newevent', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(11, '0')
   const filename = `user${id}.json`
   const filepath = path.join(__dirname, './mock/users/', filename)
-console.log(request.body)
-  const content = {
 
+  const content = {
+    id: id,
     eventTitle: request.body.eventName,
     eventDetails: request.body.eventDescription,
     eventType: request.body.eventType,
@@ -76,9 +76,6 @@ console.log(request.body)
     .then(() => response.json('OK'))
     .catch(next)
 })
-
-
-
 
 app.get('/users', (request, response) => {
   const usersDir = path.join(__dirname, './mock/users/')
@@ -105,10 +102,6 @@ app.get('/users', (request, response) => {
   response.json(users)
 
 })
-
-
-
-
 
 app.get('/users/:id', (request, response) => {
 	const filename = `user${request.params.id}.json`

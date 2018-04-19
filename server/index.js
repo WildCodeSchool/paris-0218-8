@@ -4,6 +4,7 @@ const util = require('util')
 const path = require ('path')
 
 const readFile = util.promisify(fs.readFile)
+const writeFile = util.promisify(fs.writeFile)
 const readdir = util.promisify(fs.readdir)
 
 
@@ -28,9 +29,56 @@ app.use((request, response, next) => {
   next()
 })
 
+app.use((request, response, next) => {
+  if (request.method === 'GET') return next()
+
+  //console.log('posay oklm dans le middleware sisi tkt tu peux pas test ma gueule')  
+
+  let accumulator = ''
+
+  request.on('data', data => {
+    accumulator += data
+  })
+
+  request.on('end', () => {
+    //console.log('parsing terminé')
+    try {
+      request.body = JSON.parse(accumulator)
+      next()
+    } catch (err) {
+      next(err)
+    }
+  })
+
+})
+
 app.get('/', (request, response) => {
   response.send('OK')
 })
+
+app.post('/newevent', (request, response, next) => {  
+
+  const id = Math.random().toString(36).slice(2).padEnd(11, '0')
+  const filename = `user${id}.json`
+  const filepath = path.join(__dirname, './mock/users/', filename)
+console.log(request.body)
+  const content = {
+
+    eventTitle: request.body.eventName,
+    eventDetails: request.body.eventDescription,
+    eventType: request.body.eventType,
+    eventAddress: request.body.eventAddress, 
+    eventDate: request.body.eventDate,
+    eventPeople: request.body.eventPeople
+  }
+  
+  writeFile(filepath, JSON.stringify(content), 'utf8')
+    .then(() => response.json('OK'))
+    .catch(next)
+})
+
+
+
 
 app.get('/users', (request, response) => {
   const usersDir = path.join(__dirname, './mock/users/')
@@ -44,9 +92,9 @@ app.get('/users', (request, response) => {
 
   Promise.all(allFiles)
   	.then(allFilesValues => {
-  		console.log(allFilesValues)
+  		//console.log(allFilesValues)
   		const valuesInJson = allFilesValues.map(JSON.parse)
-  		console.log(valuesInJson)
+  		//console.log(valuesInJson)
   		response.json(valuesInJson)
   	})
   	.catch(err =>{
@@ -65,7 +113,7 @@ app.get('/users', (request, response) => {
 app.get('/users/:id', (request, response) => {
 	const filename = `user${request.params.id}.json`
 	const filepath = path.join(__dirname, './mock/users/', filename)
-	console.log({ filename, filepath })
+	//console.log({ filename, filepath })
 	
 	const currentReadfile = readFile(filepath) 
 		currentReadfile.then(data => {

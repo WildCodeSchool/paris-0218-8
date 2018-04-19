@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formular</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+    <link rel="stylesheet" href="formulaire.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="brand"><span>Contact</span> us</h1>
+        <div class="wrapper animated bounceInLeft">
+            <div class="company-info">
+                <h3>Join me</h3>
+                <ul>
+                    <li><i class="fa fa-road"></i> 11 rue de poissy</li>
+                    <li><i class="fa fa-phone"></i> 0658743091</li>
+                    <li><i class="fa fa-envelope"></i> www.wildcodeshool.fr</li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h3>Send me a request</h3>
+                <form method="POST" action="send">
+                    <p>
+                        <label>Lastname</label>
+                        <input id="Lastname" type="text" name="lastname">
+                    </p>
+                    <p>
+                        <label>Firstname</label>
+                        <input id="Firstname" type="text" name="firstname">
+                    </p>
+                    <p>
+                        <label>Username</label>
+                        <input id="Username" type="text" name="username">
+                    </p>
+                    <p>
+                        <label>Email Address</label>
+                        <input id="Mail" type="email" name="email">
+                    </p>
+                    <p>
+                        <label>Password</label>
+                        <input id="Password" type="text" name="password">
+                    </p>
+                    <p>
+                        <label>Confirm password</label>
+                        <input id="Confirmpass" type="text" name="confirmpass">
+                    </p>
+                    <p>
+                        <label>Phone Number</label>
+                        <input id="Phone" type="text" name="phone">
+                    </p>
+                    <p class="full">
+                        <label>Message</label>
+                        <textarea id="Message" name="message" rows="5"></textarea>
+                    </p>
+                    <p class="full">
+                        <button id="submit-login" type="submit">Submit</button>
+                    </p>
+                </form>
+           </div>
+        </div>
+    </div>
+    <script>
+      //surveille le bouton submit login le bouton d'envoi
+
+    window.document.getElementById('submit-login').addEventListener('click', event => {
+        event.preventDefault()
+        const formulaire = {
+            FirstName: window.document.getElementById('Firstname').value,
+            LastName: window.document.getElementById('Lastname').value,
+            Username: window.document.getElementById('Username').value,
+            Password: window.document.getElementById('Password').value,
+            Confirmpass: window.document.getElementById('Confirmpass').value,
+            Email: window.document.getElementById('Mail').value,
+            Phone: window.document.getElementById('Phone').value,
+            Message: window.document.getElementById('Message').value,
+        }
+        console.log(formulaire)
+        window.fetch("http://localhost:8080/formulaire", {
+            method: 'POST',
+            body: JSON.stringify(formulaire)
+        })
+    })
+    </script>
+</body>
+
+</html>

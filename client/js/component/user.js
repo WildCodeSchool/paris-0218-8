@@ -1,20 +1,26 @@
-export const displayUser = (user) => { return  `
- <div class="container">
-   <div class='user'> 
- <div class="adepte"></div>
- 	<a href="/profil?user=${user.id}" >
-      <h2 class="name">${user.name}</h2>
-      <img src=${user.photo} class="adepte">
+export const displayUsers = user => `
+  <div class="users">
+    <a class='user' href='/user.html?id=${user.id}'> 
+      <div class="adepte"></div>
+        <a href="/profil.html?id=${user.id}" >
+          <h2 class="name">${user.username}</h2>
+          <img src=${user.photo} class="adepte">
+        </a>
+      </div>
     </a>
-  </div>
-  </div>
- </div> 
+  </div> 
 `
-}
 
-
-
-/*  <p>${user.profil}</p>
-    <p>${user.mailaddress}</p>
-    <p>${user.numberofplays}</p>
-*/
+export const displayUser = user => `
+  <div class="users">
+    <a class='user' href='/user.html?id=${user.id}'> 
+      <div class="adepte"></div>
+        <a href="/profil.html?id=${user.id}" >
+          <h2 class="name">${user.username}</h2>
+          <img src=${user.photo} class="adepte">
+          <p>${user.mail}</p>
+        </a>
+      </div>
+    </a>
+  </div> 
+`

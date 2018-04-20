@@ -4,11 +4,11 @@
   "description": "Backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'no tests'",
+    "test": "echo 'no tests'"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.16.3"
   }
 }

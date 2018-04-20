@@ -1,0 +1,247 @@
+/* Navabar */
+
+.nav_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background-color: D3D3D3;
+    text-align: right;
+    height: 70px;
+    line-height: 70px; /* needs to be the same height as your navigation div */
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    display: flex;
+}
+
+.nav_li {
+    color: White;
+    display: flex;
+    font-size: 30px;
+    font-weight: 200;
+    margin: 0 auto; 
+}
+
+.nav_li a {
+    display: flex;
+    color: #6ca4b0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav_li a:hover {
+    background-color: #6ca4b0;
+    color: white
+}
+
+nav img {
+    position: relative;
+    display: flex;
+}
+
+
+
+/* Carrousel */
+
+#slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+#slider figure img {
+    width: 20%;
+    height: auto;
+    float: left;
+}
+
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    padding: 0;
+    animation: 25s slide infinite;
+}
+
+
+@keyframes slide {
+    0% {
+        left: 0%;
+    }
+    20% {
+        left: 0%;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+.legende {
+    position: absolute;
+    font-size: 30px;
+    margin-top: 250px;
+}
+
+
+
+/* Adeptes */
+
+.adepte {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.users {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.name {
+    text-align: center;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.rating {
+    direction: rtl;
+}
+
+.rating a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 2em;
+    transition: color .4s;
+    margin: 1px;
+    /*margin-left: 10px;*/
+}
+
+.rating a:hover,
+.rating a:focus,
+.rating a:hover~a,
+.rating a:focus~a {
+    color: orange;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Concept */
+
+#concept {
+    background: D3D3D3;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.icon {
+    display: inline-flex;
+    position: relative;
+    margin: 1%;
+    width: 23%;
+    height: 100px;
+    background-color: #6ca4b0;
+    text-align: center;
+    vertical-align:top;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+}
+.trouver {
+    display: inline-flex;
+    position: relative;
+    margin: 1%;
+    width: 23%;
+    height: 100px;
+    background-color: #6ca4b0;
+    text-align: center;
+    vertical-align:top;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+}
+.sorter {
+    display: inline-flex;
+    position: relative;
+    margin: 1%;
+    width: 23%;
+    height: 100px;
+    background-color:#6ca4b0;
+    text-align: center;
+    vertical-align:top;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+}
+
+
+/* Footer */
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: grey;
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.copyright {
+    height: 24px;
+    margin-top: 10px;
+}
+
+.listfooter {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.elemlist {
+    display: inline-flex;
+    margin: 4px;
+}
+
+.message { 
+color:#6ca4b0;
+text-transform: uppercase;
+padding-top: 50px;
+font-weight: bold;
+font-size: 40px;
+}

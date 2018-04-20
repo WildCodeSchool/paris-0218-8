@@ -5,32 +5,41 @@
     margin: 0;
     padding: 0px;
     overflow: hidden;
-    background-color: black;
+    background-color: D3D3D3;
     text-align: right;
+    height: 70px;
+    line-height: 70px; /* needs to be the same height as your navigation div */
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    display: flex;
 }
 
 .nav_li {
-    display: inline;
+    color: White;
+    display: flex;
+    font-size: 30px;
+    font-weight: 200;
+    margin: 0 auto;
 }
 
 .nav_li a {
-    display: inline-block;
-    color: white;
+    display: flex;
+    color: #1E90FF;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .nav_li a:hover {
-    background-color: #2C353F;
+    background-color: #1E90FF;
+    color: white
 }
 
 nav img {
     position: relative;
     display: flex;
-    margin-left: 20px;
 }
 
 
@@ -145,14 +154,51 @@ nav img {
 /* Concept */
 
 #concept {
-    background: radial-gradient(circle, #0A8893, #11555B);
+    background: D3D3D3;
     border-radius: 10px;
     font-size: 20px;
+    text-align: center;
 }
 
-
-
-
+.icon {
+    display: inline-flex;
+    position: relative;
+    margin: 1%;
+    width: 23%;
+    height: 100px;
+    background-color: #1E90FF;
+    text-align: center;
+    vertical-align:top;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.trouver {
+    display: inline-flex;
+    position: relative;
+    margin: 1%;
+    width: 23%;
+    height: 100px;
+    background-color: #1E90FF;
+    text-align: center;
+    vertical-align:top;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.sorter {
+    display: inline-flex;
+    position: relative;
+    margin: 1%;
+    width: 23%;
+    height: 100px;
+    background-color: #1E90FF;
+    text-align: center;
+    vertical-align:top;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
 
 
 /* Footer */

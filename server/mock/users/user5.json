@@ -1,8 +1,10 @@
 {
   "id": 5,
-  "name": "Framboise",
-  "photo": "http://static8.viadeo-static.com/tPF_kgF9zMDK2cKef3p1Uk4fJwo=/300x300/member/002eo943ni6uh49?ts=1483351754000",
-  "profil": "Les framboises, c'est boooooon",
-  "mailaddress": "framboise@gmail.com",
-  "Numberofplays": 4
+  "username": "Framboise",
+  "password": "mdp",
+  "confirmpass": "mdp",
+  "email": "",
+  "phone": "",
+  "message": "",
+  "photo": "http://static8.viadeo-static.com/tPF_kgF9zMDK2cKef3p1Uk4fJwo=/300x300/member/002eo943ni6uh49?ts=1483351754000"
 }

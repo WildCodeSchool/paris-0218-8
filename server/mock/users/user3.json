@@ -1,8 +1,10 @@
 {
   "id": 3,
-  "name": "Junior",
-  "photo": "http://i.ytimg.com/vi/qmTBfn53lSk/mqdefault.jpg",
-  "profil": "lé vetemens flashy, c tro bi1",
-  "mailaddress": "clement.denis@gmail.com",
-  "numberofplays": 9
+  "username": "Junior",
+  "password": "mdp",
+  "confirmpass": "mdp",
+  "email": "",
+  "phone": "",
+  "message": "",
+  "photo": "http://i.ytimg.com/vi/qmTBfn53lSk/mqdefault.jpg"
 }

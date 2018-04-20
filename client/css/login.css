@@ -15,7 +15,6 @@ body{
   margin-left:auto;
   margin-right:auto;
   padding:1em;
-  border-radius: 50px;
 }
 
 ul{
@@ -25,6 +24,7 @@ ul{
 
 .brand{
   text-align: center;
+  color:white;
 }
 
 .brand span{
@@ -40,12 +40,14 @@ ul{
 }
 
 .company-info{
-  background: #FF760C;
+  background: #6ca4b0;
 }
 
 .company-info h3, .company-info ul{
   text-align: center;
   margin:0 0 1rem 0;
+  color:white;
+  font-size: 25px;
 }
 
 .contact{
@@ -74,7 +76,7 @@ ul{
 .contact form button, .contact form input, .contact form textarea{
   width:100%;
   padding:1em;
-  border:1px solid /*#c9e6ff*/ #FF760C;
+  border:1px solid /*#c9e6ff*/ #6ca4b0;
 }
 
 .contact form button{
@@ -83,19 +85,14 @@ ul{
   text-transform: uppercase;
 }
 
-#button:hover, #button:focus{
-  background:#92bde7;
+.contact form button:hover,.contact form button:focus{
+  background:#6ca4b0;
   color:#fff;
   outline:0;
   transition: background-color 2s ease-out;
-  border-color: #5e5f60;
 }
 
-#button {
-  border-color: #5e5f60;
-}
-
-/* LARGE SCREENS */
+LARGE SCREENS 
 @media(min-width:700px){
   .wrapper{
     display: grid;

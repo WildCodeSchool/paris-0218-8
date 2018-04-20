@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "client": "http-server client",
-    "server": "nodemon server --ignore client",
+    "client": "serve client",
+    "server": "nodemon server --ignore client --ignore '*.json'",
     "test": "echo 'no tests'",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
     "lint:fix": "standard --fix | snazzy",
@@ -14,9 +14,9 @@
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.11",
     "htmllint-cli": "0.0.6",
-    "http-server": "^0.11.1",
     "nodemailer": "^4.6.4",
     "nodemon": "^1.17.2",
+    "serve": "^6.5.5",
     "snazzy": "^7.1.1",
     "standard": "^11.0.1",
     "stylelint": "^9.1.3",

@@ -15,6 +15,7 @@ body{
   margin-left:auto;
   margin-right:auto;
   padding:1em;
+  border-radius: 50px;
 }
 
 ul{
@@ -82,11 +83,16 @@ ul{
   text-transform: uppercase;
 }
 
-.contact form button:hover,.contact form button:focus{
+#button:hover, #button:focus{
   background:#92bde7;
   color:#fff;
   outline:0;
   transition: background-color 2s ease-out;
+  border-color: #5e5f60;
+}
+
+#button {
+  border-color: #5e5f60;
 }
 
 /* LARGE SCREENS */

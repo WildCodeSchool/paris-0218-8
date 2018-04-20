@@ -1,0 +1,79 @@
+reg_mail = new RegExp('^[0-9a-z]{1,}[0-9a-z._-]{0,}[0-9a-z]@{1}[0-9a-z]{1,}[0-9a-z._-]{0,}[0-9a-z][.]{1}[a-z]{2,}$');
+reg_tel = new RegExp('^0[1-9][0-9]{8}$');
+reg_nom_pren = new RegExp('^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ][a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ \'-]{1,50}$');
+reg_mess = new RegExp('^.{20,250}$');
+
+function env_form() {
+	bit_de_vie='0';
+	var mail=document.getElementById("mail_html").value;
+	var nom=document.getElementById("nom_html").value;
+	var mess=document.getElementById("mess_html").value;
+	var tel=document.getElementById("tel_html").value;
+
+	if (nom.match(reg_nom_pren)) {
+	} else {
+		bit_de_vie='1';
+	}
+	if (tel.match(reg_tel)) {
+	} else {
+		bit_de_vie='1';
+	}
+	if (mail.match(reg_mail)) {
+	} else {
+		bit_de_vie='1';
+	}
+	if (mess.match(reg_mess)) {
+	} else {
+		bit_de_vie='1';
+	}	
+	if (bit_de_vie=='0') {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function ch_blur(ch_saisi) {
+	saisi_user=ch_saisi.value;
+	
+	function saisi_ok() {
+	document.getElementById(ch_saisi.id).style.border="1px solid rgb(50, 200, 50)";
+	document.getElementById('msg_'+ch_saisi.id).style.color="transparent";
+	}
+	function saisi_pasok() {
+	document.getElementById(ch_saisi.id).style.border="1px solid rgb(200, 50, 50)";
+	document.getElementById('msg_'+ch_saisi.id).style.color="rgb(200, 50, 50)";
+	}
+	
+	if(ch_saisi.id=='nom_html') {
+		if (saisi_user.match(reg_nom_pren)) {
+			saisi_ok();
+		} else {
+			saisi_pasok();
+		}
+	}
+	if(ch_saisi.id=='tel_html') {
+		console.info(ch_saisi.value);
+		if (saisi_user.match(reg_tel)) {
+			saisi_ok();
+		} else {
+			saisi_pasok();
+		}
+	}
+	if(ch_saisi.id=='mail_html') {
+		console.info(ch_saisi.value);
+		if (saisi_user.match(reg_mail)) {
+			saisi_ok();
+		} else {
+			saisi_pasok();
+		}
+	}
+	if(ch_saisi.id=='mess_html') {
+		console.info(ch_saisi.value);
+		if (saisi_user.match(reg_mess)) {
+			saisi_ok();
+		} else {
+			saisi_pasok();
+		}
+	}
+}

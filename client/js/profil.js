@@ -1,6 +1,7 @@
 /* global fetch, URLSearchParams */
 
 import { displayUser } from './component/user.js'
+console.log('userProfile is connected')
 
 const userElement = document.getElementById('user')
 const params = new URLSearchParams(window.location.search)

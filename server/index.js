@@ -134,5 +134,19 @@ app.get('/eventsList', (request, response) => {
     })
 })
 
+app.get('/eventsList/:id', (request, response) => {
+  const filename = `event-${request.params.id}.json`
+  const filepath = path.join(__dirname, './mock/events/', filename)
+
+  readFile(filepath)
+    .then(data => {
+      response.header('Content-type', 'application/json; charset=utf-8')
+      response.end(data)
+    })
+    .catch(() => {
+      response.status(404).end('event not found')
+    })
+})
+
 
 app.listen(8080, () => console.log('Listening to 8080 port'))

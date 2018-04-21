@@ -1,0 +1,15 @@
+export const displayEvent = event => `
+  <div class="event">
+    <a class='party' href='/user.html?id=${event.id}'> 
+      <div class="OneEvent"></div>
+        <a href="/eventsList.html?id=${event.id}" >
+          <h2 class="title">${event.title}</h2>
+          <h2 class="desc">${event.description}</h2>
+          <h2 class="type">${event.type}</h2>
+          <h2 class="date">${event.date}</h2>
+          <h2 class="people">${event.people}</h2>
+        </a>
+      </div>
+    </a>
+  </div> 
+  `

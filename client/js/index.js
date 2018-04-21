@@ -2,7 +2,7 @@
 
 import { displayUsers } from './component/user.js'
 
-console.log('connected')
+console.log('usersList connected')
 
 fetch('http://localhost:8080/users')
   .then(response => response.json())

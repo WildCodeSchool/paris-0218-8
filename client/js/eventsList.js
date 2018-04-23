@@ -1,12 +1,11 @@
-import { displayEvents } from './component/events.js'
-
-console.log('eventsList connected')
+/* global fetch */
+import { createEventElement } from './component/event.js'
 
 fetch('http://localhost:8080/eventsList')
   .then(response => response.json())
   .then(events => {
-  	const eventsElement = document.getElementById('events')
-    const eventElements = events.map(displayEvents).join('')
+    const eventsElement = document.getElementById('events')
+    const eventElements = events.map(createEventElement).join('')
 
     eventsElement.innerHTML = eventElements
   })

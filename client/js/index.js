@@ -1,6 +1,6 @@
 /* global fetch */
 
-import { displayUsers } from './component/user.js'
+import { createUserElement } from './component/user.js'
 
 console.log('usersList connected')
 
@@ -8,7 +8,7 @@ fetch('http://localhost:8080/users')
   .then(response => response.json())
   .then(users => {
     const usersElement = document.getElementById('profiles')
-    const userElements = users.map(displayUsers).join('')
+    const userElements = users.map(createUserElement).join('')
 
     usersElement.innerHTML = userElements
   })

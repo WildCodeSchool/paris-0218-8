@@ -6,8 +6,10 @@ body{
   background: #414851;
   color:#485e74;
   line-height:1.6;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+  font-family: 'Raleway Dots', cursive;
   padding:1em;
+  font-size: 1.2em;
 }
 
 .container{
@@ -44,11 +46,11 @@ ul{
   background: #6ca4b0;
 }
 
-.company-info h3, .company-info ul{
+.company-info h1, .company-info ul{
   text-align: center;
   margin:0 0 1rem 0;
   color : white;  
-  font-size: 25px; 
+  font-size: 3.5em; 
 }
 
 .contact{
@@ -88,9 +90,9 @@ ul{
 
 #button:hover, #button:focus{
   background:#6ca4b0;
-  color:#fff;
+  color: orange;
   outline:0;
-  transition: background-color 2s ease-out;
+  transition: background-color 1s ease-out;
   border-color: #5e5f60;
 }
 
@@ -111,7 +113,7 @@ LARGE SCREENS
     padding:2em;
   }
 
-  .company-info h3, .company-info ul, .brand{
+  .company-info h1, .company-info ul, .brand{
     text-align: left;
     color: white;
   }

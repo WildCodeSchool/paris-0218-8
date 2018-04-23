@@ -1,7 +1,7 @@
 export const createEventElement = event => `
   <div class="events">
     <div class="evenement"></div>
-      <a href="/html/scheduledEvent.html?id=${event.id}" >
+      <a href="scheduledEvent.html?id=${event.id}" >
         <h2 class="title">${event.title}</h2>
       </a>
     </div>

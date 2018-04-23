@@ -1,5 +1,9 @@
 /* global fetch */
 
+import { createNavbarElement } from './component/nav.js'
+
+document.getElementById('navDyn').innerHTML = createNavbarElement()
+
 const form = window.document.getElementById('signup-form')
 
 form.addEventListener('submit', e => {

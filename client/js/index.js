@@ -1,8 +1,11 @@
 /* global fetch */
 
 import { createUserElement } from './component/user.js'
+import { createNavbarElement } from './component/nav.js'
 
 console.log('connected')
+
+document.getElementById('navDyn').innerHTML = createNavbarElement()
 
 fetch('http://localhost:8080/users')
   .then(response => response.json())
@@ -13,16 +16,16 @@ fetch('http://localhost:8080/users')
     usersElement.innerHTML = userElements
   })
 
-/* effet fade in sur le bloc Concept */
-
+// effet fade in sur le bloc Concept
+/*
 (window).on('load', function () {
   (window).scroll(function () {
     ('.fade').each(function () {
-      /* Check the location of each desired element */
+      // Check the location of each desired element
       var objectBottom = $(this).offset().top + $(this).outerHeight()
       var windowBottom = $(window).scrollTop() + $(window).innerHeight()
 
-      /* If the element is completely within bounds of the window, fade it in */
+      // If the element is completely within bounds of the window, fade it in
       if (objectBottom < windowBottom) { // object comes into view (scrolling down)
         if ($(this).css('opacity') == 0) { $(this).fadeTo(500, 1) }
       } else { // object goes out of view (scrolling up)
@@ -31,3 +34,4 @@ fetch('http://localhost:8080/users')
     })
   }); $(window).scroll() // invoke scroll-handler on page-load
 })
+*/

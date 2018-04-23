@@ -86,10 +86,11 @@ ul{
   background: white;
   border: 1px solid grey;
   text-transform: uppercase;
+
 }
 
 #button:hover, #button:focus{
-  background:#6ca4b0;
+  background: #6ca4b0;
   color: orange;
   outline:0;
   transition: background-color 1s ease-out;

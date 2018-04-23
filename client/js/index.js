@@ -1,6 +1,6 @@
 /* global fetch */
 
-import { displayUsers } from './component/user.js'
+import { createUserElement } from './component/user.js'
 
 console.log('connected')
 
@@ -8,16 +8,16 @@ fetch('http://localhost:8080/users')
   .then(response => response.json())
   .then(users => {
     const usersElement = document.getElementById('profiles')
-    const userElements = users.map(displayUsers).join('')
+    const userElements = users.map(createUserElement).join('')
 
     usersElement.innerHTML = userElements
   })
 
 /* effet fade in sur le bloc Concept */
 
-$(window).on('load', function () {
-  $(window).scroll(function () {
-    $('.fade').each(function () {
+(window).on('load', function () {
+  (window).scroll(function () {
+    ('.fade').each(function () {
       /* Check the location of each desired element */
       var objectBottom = $(this).offset().top + $(this).outerHeight()
       var windowBottom = $(window).scrollTop() + $(window).innerHeight()

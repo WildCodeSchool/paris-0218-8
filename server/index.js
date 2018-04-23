@@ -111,4 +111,41 @@ app.get('/users/:id', (request, response) => {
       response.status(404).end('user not found')
     })
 })
+
+app.get('/eventsList', (request, response) => {
+  const eventsDir = path.join(__dirname, './mock/events/')
+  readdir(eventsDir)
+    .then(files => {
+      const filepaths = files.map(file => path.join(eventsDir, file))
+
+      const allFiles = filepaths.map(filepath => {
+        return readFile(filepath, 'utf8')
+      })
+
+      Promise.all(allFiles)
+        .then(allFilesValues => {
+          const events = allFilesValues.map(JSON.parse)
+
+          response.json(events)
+        })
+        .catch(err => {
+          response.status(500).end(err.message)
+        })
+    })
+})
+
+app.get('/eventsList/:id', (request, response) => {
+  const filename = `event-${request.params.id}.json`
+  const filepath = path.join(__dirname, './mock/events/', filename)
+
+  readFile(filepath)
+    .then(data => {
+      response.header('Content-type', 'application/json; charset=utf-8')
+      response.end(data)
+    })
+    .catch(() => {
+      response.status(404).end('event not found')
+    })
+})
+
 app.listen(8080, () => console.log('Listening to 8080 port'))

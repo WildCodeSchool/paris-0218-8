@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Formular</title>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cabin+Sketch|Love+Ya+Like+A+Sister|Monoton|Orbitron|Rajdhani|Raleway+Dots|VT323|Wallpoet" rel="stylesheet">
-    <link rel="stylesheet" href="../css/newEvent.css">
-  </head>
-  <body>
-    <div class="container">
-      <!-- <h1 class="brand">Créer votre évènement</h1> -->
-      <div class="wrapper animate bounceInLeft">
-        <div class="company-info">
-          <h1>Créer votre évènement</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formular</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cabin+Sketch|Love+Ya+Like+A+Sister|Monoton|Orbitron|Rajdhani|Raleway+Dots|VT323|Wallpoet" rel="stylesheet">
+  <link rel="stylesheet" href="../css/newEvent.css">
+</head>
+<body>
+  <div class="container">
+    <!-- <h1 class="brand">Créer votre évènement</h1> -->
+    <div class="wrapper animate bounceInLeft">
+      <div class="company-info">
+        <h1>Créer votre évènement</h1>
           <!-- <ul>
             <li><i class="fa fa-road"></i> 11 rue de poissy</li>
             <li><i class="fa fa-phone"></i> 0658743091</li>
@@ -23,63 +23,62 @@
           </ul> -->
         </div>
         <div class="contact">
-          
           <form id="add-new-event">
             <label>
               Nom de l'évènement :
               <input type="text" id="add-event-title" name="title">
             </label>
-            <form>
-              <div>
-                <label for="party">Veuillez choisir la meilleure date pour la soirée :</label>
-                <input type="date" id="party" name="party" min="2018-04-01" max="2020-12-31">
-              </div>
-            </form>
-            
+            <label for="party">Veuillez choisir la meilleure date pour la soirée :
+              <input type="date" id="add-event-date" name="date" min="2018-04-01" max="2020-12-31">
+            </label>
             <label>
               Sélectionner le type de jeux :
-              <select name="choix"><br>
-                <option value="">jeux de société</option>
-                <option value="">jeux de rôle</option>
-                <option value="">jeux de casino</option>
+              <select id="choix_jeux" name="game"><br>
+                <option>jeux de société</option>
+                <option>jeux de rôle</option>
+                <option>jeux de casino</option>
               </select>
             </label>
             <label>
               Sélectionner le style vestimentaire :
-              <select name="choix"><br>
-                <option value="">Cool - on reste décontracté</option>
-                <option value="">Fun - partie déguisée</option>
-                <option value="">Oscar - tenue chic exigée</option>
+              <select id="choix_style" name="style"><br>
+                <option>Cool - on reste décontracté</option>
+                <option>Fun - partie déguisée</option>
+                <option>Oscar - tenue chic exigée</option>
               </select>
-              <label>
-                <label>
-                  Sélectionner le sexe :
-                  <select name="choix"><br>
-                    <option value="">Adultes - Mixtes</option>
-                    <option value="">Adultes - Femmes</option>
-                    <option value="">Adultes - Hommes</option>
-                    <option value="">Ados - Mixtes (14-18ans)</option>
-                    <option value="">Adolescentes (14- 18ans</option>
-                    <option value="">Adolescents (14 - 18ans)</option>
-                    <option value="">Enfants - Mixtes</option>
-                    <option value="">Enfants - Filles</option>
-                    <option value="">Enfants - Garçons</option>
-                  </select>
-                  <label>
-                    Description :
-                    <textarea id="add-event-description" name="description"></textarea>
-                  </label>
-                  <label>
-                    Adresse :
-                    <textarea id="add-event-address" name="address"></textarea>
-                  </label>
-                  <label>
-                    Nombre de personnes :
-                    <textarea id="add-people-number" name="people"></textarea>
-                  </label>
-                  
-                  <input id="button" type="submit" value="Envoyez">
-                </form>                
-                <script type='module' src="../js/newEventForm.js"></script>
-              </body>
-            </html>
+            </label>
+            <label>
+              Sélectionner le sexe :
+              <select id="choix_sexe" name="sexe"><br>
+                <option>Adultes - Mixtes</option>
+                <option>Adultes - Femmes</option>
+                <option>Adultes - Hommes</option>
+                <option>Ados - Mixtes (14-18ans)</option>
+                <option>Adolescentes (14- 18ans</option>
+                <option>Adolescents (14 - 18ans)</option>
+                <option>Enfants - Mixtes</option>
+                <option>Enfants - Filles</option>
+                <option>Enfants - Garçons</option>
+              </select>
+            </label>
+            <label>
+              Description :
+              <textarea id="add-event-description" name="description"></textarea>
+            </label>
+            <label>
+              Adresse :
+              <textarea id="add-event-address" name="address"></textarea>
+            </label>
+            <label>
+              Nombre de personnes :
+              <textarea id="add-people-number" name="people"></textarea>
+            </label>
+            <input id="button" type="submit" value="Envoyez">
+          </form> 
+        </div>
+      </div>  
+    </div>  
+
+    <script type='module' src="../js/newEventForm.js"></script>
+  </body>
+</html>

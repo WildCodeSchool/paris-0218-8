@@ -1,4 +1,7 @@
 /* eslint-disable no-unused-vars */
+import { createHeadElement } from './component/head.js'
+document.getElementById('head').innerHTML = createHeadElement()
+
 const google = 'google'
 const initMap = () => {
   const paris = {lat: 48.860, lng: 2.3386}

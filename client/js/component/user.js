@@ -15,6 +15,10 @@ export const createUserDetailElement = user => `
       <h2 class="name">${user.username}</h2>
       <img src=${user.photo} class="adepte">
       <p>${user.email}</p>
+      <p>${user.phone}</p>
+      <p>${user.message}</p>
+
+
     </div>
   </div> 
 `

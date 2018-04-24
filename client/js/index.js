@@ -2,11 +2,14 @@
 
 import { createUserElement } from './component/user.js'
 import { createNavbarElement } from './component/nav.js'
+import { createHeadElement } from './component/head.js'
+import { createScriptElement } from './component/scriptbootstrap.js'
 
-console.log('connected')
-
+document.getElementById('scriptbootstrap').innerHTML = createScriptElement()
+document.getElementById('head').innerHTML = createHeadElement()
 document.getElementById('navDyn').innerHTML = createNavbarElement()
 
+console.log('connected')
 fetch('http://localhost:8080/users')
   .then(response => response.json())
   .then(users => {

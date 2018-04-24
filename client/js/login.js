@@ -1,7 +1,11 @@
 /* global fetch */
 
 import { createNavbarElement } from './component/nav.js'
+import { createHeadElement } from './component/head.js'
+import { createScriptElement } from './component/scriptbootstrap.js'
 
+document.getElementById('scriptbootstrap').innerHTML = createScriptElement()
+document.getElementById('head').innerHTML = createHeadElement()
 document.getElementById('navDyn').innerHTML = createNavbarElement()
 
 const form = window.document.getElementById('signup-form')

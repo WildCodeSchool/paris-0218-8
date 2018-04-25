@@ -14,7 +14,7 @@ export const createUserElement = user =>
 ` <div class= "row d-flex justify-content-between ml-5" >
     <div class="col-2">
       <h2 class="name mt-5">${user.username}</h2>
-      <img class="rounded-circle" src=${user.photo} style="width:150px;height:150px;">
+      <img class="rounded-circle" src=${user.photo} style="width:150px; height:150px;">
     </div>
   <div> `
 

@@ -1,7 +1,6 @@
 /* global fetch */
 import { createNavbarElement } from './component/nav.js'
-import { createHeadElement } from './component/head.js'
-document.getElementById('head').innerHTML = createHeadElement()
+
 document.getElementById('navDyn').innerHTML = createNavbarElement()
 
 const form = document.getElementById('add-new-event')

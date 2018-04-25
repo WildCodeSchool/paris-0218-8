@@ -2,9 +2,7 @@
 
 import { createUserElement } from './component/user.js'
 import { createNavbarElement } from './component/nav.js'
-import { createHeadElement } from './component/head.js'
 
-document.getElementById('head').innerHTML = createHeadElement()
 document.getElementById('navDyn').innerHTML = createNavbarElement()
 
 console.log('connected')

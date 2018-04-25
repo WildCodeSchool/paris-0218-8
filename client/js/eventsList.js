@@ -1,15 +1,10 @@
 /* global fetch */
 import { createEventElement } from './component/event.js'
 import { createNavbarElement } from './component/nav.js'
-import { createHeadElement } from './component/head.js'
-
-document.getElementById('head').innerHTML = createHeadElement()
 
 document.getElementById('navDyn').innerHTML = createNavbarElement()
 
 const form = document.getElementById('add-new-event')
-
-
 
 fetch('http://localhost:8080/eventsList')
   .then(response => response.json())

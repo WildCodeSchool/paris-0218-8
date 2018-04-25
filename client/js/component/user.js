@@ -11,14 +11,12 @@ export const createUserElement = user =>
   </div> 
 `
 */
-`<div class = "container ">
-  <div class= "row d-inline-block" >
-    <div class="col-2 ">
-      <h2 class="name">${user.username}</h2>
-      <img class="" src=${user.photo} style="width:120px;height:120px;">
+` <div class= "row d-flex justify-content-between ml-5" >
+    <div class="col-2">
+      <h2 class="name mt-5">${user.username}</h2>
+      <img class="rounded-circle" src=${user.photo} style="width:150px;height:150px;">
     </div>
-  <div> 
-</div>`
+  <div> `
 
 export const createUserDetailElement = user => `
   <div class="users">
@@ -28,8 +26,6 @@ export const createUserDetailElement = user => `
       <p>${user.email}</p>
       <p>${user.phone}</p>
       <p>${user.message}</p>
-
-
     </div>
   </div> 
 `

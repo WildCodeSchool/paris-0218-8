@@ -1,32 +1,61 @@
 /* Font */
 
-body {
-  /*font-family: 'Raleway Dots', cursive;*/
+html {
+    font-size: 62.5%;
+    /* Ré-équilibrage du Rem face au Pixel pour des calculs simples */
 }
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4rem;
+}
+
+
 
 /* Navbar */
 
-#login {
-  font-size: 17px;
+li {
+    font-size: 2.0rem;
 }
 
+.navbar-nav>li {
+    padding: 0 50px;
+}
 
+.colorstyle {
+    color: #05a7ad !important;
+}
+
+#login {
+    font-size: 1.rem;
+}
+
+/*Carousel*/
+
+.carousel-item{
+width:auto;
+height :38vw;
+} 
 
 /* Footer */
 
 footer {
-  position: relative;
-  left: 0;
-  bottom: 0;
-  height: 50px;
-  width: 100%;
-  background-color: #414851;
-  display: flex;
-  align-items: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #414851;
+    display: flex;
+    align-items: center;
 }
 
 footer span {
-  color: white;
-  padding: 20px;
-  font-size: 20px;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.adept {
+  
 }

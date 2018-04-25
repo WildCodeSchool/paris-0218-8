@@ -1,84 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head id="head">
-  <title>Formular</title> 
-  <link rel="stylesheet" href="css/newEvent.css">
+    <title>Formular</title>
+    <link rel="stylesheet" href="css/newEvent.css">
 </head>
 <!-- début de la Navbar -->
-    <header id="navDyn">
+<header id="navDyn">
+</header>
+<!-- fin de la Navbar-->
 
-    </header>
-    <!-- fin de la Navbar-->
 <body>
-  <div class="container">
-    <!-- <h1 class="brand">Créer votre évènement</h1> -->
-    <div class="wrapper animate bounceInLeft">
-      <div class="company-info">
-        <h1>Créer votre évènement</h1>
-          <!-- <ul>
+    <div class="container">
+        <!-- <h1 class="brand">Créer votre évènement</h1> -->
+        <div class="wrapper animate bounceInLeft">
+            <div class="company-info">
+                <h1>Créer votre évènement</h1>
+                <!-- <ul>
             <li><i class="fa fa-road"></i> 11 rue de poissy</li>
             <li><i class="fa fa-phone"></i> 0658743091</li>
             <li><i class="fa fa-envelope"></i> www.wildcodeshool.fr</li>
           </ul> -->
+            </div>
+            <div class="contact">
+                <form id="add-new-event">
+                    <label>
+                        Nom de l'évènement :
+                        <input type="text" id="add-event-title" name="title">
+                    </label>
+                    <label for="party">Veuillez choisir la meilleure date pour la soirée :
+                        <input type="date" id="add-event-date" name="date" min="2018-04-01" max="2020-12-31">
+                    </label>
+                    <label>
+                        Sélectionner le type de jeux :
+                        <select id="choix_jeux" name="game">
+                            <br>
+                            <option>jeux de société</option>
+                            <option>jeux de rôle</option>
+                            <option>jeux de casino</option>
+                        </select>
+                    </label>
+                    <label>
+                        Sélectionner le style vestimentaire :
+                        <select id="choix_style" name="style">
+                            <br>
+                            <option>Cool - on reste décontracté</option>
+                            <option>Fun - partie déguisée</option>
+                            <option>Oscar - tenue chic exigée</option>
+                        </select>
+                    </label>
+                    <label>
+                        Sélectionner le sexe :
+                        <select id="choix_sexe" name="sexe">
+                            <br>
+                            <option>Adultes - Mixtes</option>
+                            <option>Adultes - Femmes</option>
+                            <option>Adultes - Hommes</option>
+                            <option>Ados - Mixtes (14-18ans)</option>
+                            <option>Adolescentes (14- 18ans</option>
+                            <option>Adolescents (14 - 18ans)</option>
+                            <option>Enfants - Mixtes</option>
+                            <option>Enfants - Filles</option>
+                            <option>Enfants - Garçons</option>
+                        </select>
+                    </label>
+                    <label>
+                        Description :
+                        <textarea id="add-event-description" name="description"></textarea>
+                    </label>
+                    <label>
+                        Adresse :
+                        <textarea id="add-event-address" name="address"></textarea>
+                    </label>
+                    <label>
+                        Nombre de personnes :
+                        <textarea id="add-people-number" name="people"></textarea>
+                    </label>
+                    <input id="button" type="submit" value="Envoyez">
+                </form>
+            </div>
         </div>
-        <div class="contact">
-          <form id="add-new-event">
-            <label>
-              Nom de l'évènement :
-              <input type="text" id="add-event-title" name="title">
-            </label>
-            <label for="party">Veuillez choisir la meilleure date pour la soirée :
-              <input type="date" id="add-event-date" name="date" min="2018-04-01" max="2020-12-31">
-            </label>
-            <label>
-              Sélectionner le type de jeux :
-              <select id="choix_jeux" name="game"><br>
-                <option>jeux de société</option>
-                <option>jeux de rôle</option>
-                <option>jeux de casino</option>
-              </select>
-            </label>
-            <label>
-              Sélectionner le style vestimentaire :
-              <select id="choix_style" name="style"><br>
-                <option>Cool - on reste décontracté</option>
-                <option>Fun - partie déguisée</option>
-                <option>Oscar - tenue chic exigée</option>
-              </select>
-            </label>
-            <label>
-              Sélectionner le sexe :
-              <select id="choix_sexe" name="sexe"><br>
-                <option>Adultes - Mixtes</option>
-                <option>Adultes - Femmes</option>
-                <option>Adultes - Hommes</option>
-                <option>Ados - Mixtes (14-18ans)</option>
-                <option>Adolescentes (14- 18ans</option>
-                <option>Adolescents (14 - 18ans)</option>
-                <option>Enfants - Mixtes</option>
-                <option>Enfants - Filles</option>
-                <option>Enfants - Garçons</option>
-              </select>
-            </label>
-            <label>
-              Description :
-              <textarea id="add-event-description" name="description"></textarea>
-            </label>
-            <label>
-              Adresse :
-              <textarea id="add-event-address" name="address"></textarea>
-            </label>
-            <label>
-              Nombre de personnes :
-              <textarea id="add-people-number" name="people"></textarea>
-            </label>
-            <input id="button" type="submit" value="Envoyez">
-          </form> 
-        </div>
-      </div>  
-    </div>  
-
+    </div>
     <script type='module' src="js/newEventForm.js"></script>
-    <script id="scriptbootstrap"></script>
-  </body>
+    <!-- script boostrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
 </html>

@@ -19,7 +19,7 @@ li {
 }
 
 .navbar-nav>li {
-    padding: 0 50px;
+    padding: 0 40px;
 }
 
 .colorstyle {
@@ -35,7 +35,7 @@ li {
 .carousel-item{
 width:auto;
 height :38vw;
-} 
+}
 
 /* Footer */
 
@@ -57,5 +57,5 @@ footer span {
 }
 
 .adept {
-  
+
 }

@@ -1,26 +1,18 @@
 
-
  .sub {
      justify-content: center;
  }
 
  .company-info {
-     text-align: center;
+
      border: solid 1px;
-     margin: 50px;
+     margin: 5px;
 
      font-family: 'Raleway Dots', cursive;
      padding: 1em;
      font-size: 1.2em;
  }
 
- .row {
-     max-width: 1170px;
-     margin-left: auto;
-     margin-right: auto;
-     padding: 1em;
-
- }
 
 .company-info{
 background:
@@ -30,29 +22,20 @@ background:
 
 .company-info h1, .company-info ul{
 text-align: center;
-margin:0 0 1rem 0;
+
 color : white;
 font-size: 3.5em;
 }
 
-.row{
-  background-color:white ;
-  opacity: 0.8;
-  border-radius:5px;
-  border:1px solid grey;
-}
-
 
 .container{
-max-width:1170px;
-margin-left:auto;
-margin-right:auto;
-padding:2em;
+max-width:900px;
  border-radius:5px;
+ padding: 15px;
 }
 
 .contall{
-  background-image: url("http://www.trentotto.fr/wp-content/uploads/2017/11/trentotto_WildWolf_jeux-de-soci%C3%A9t%C3%A9_games-room.jpg");
+  /*background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSEUFHJg-qSCsEAKmfmhRg9slsjfbG9AvH4rNvreqiT3AtmiAygg");*/
 }
 
 .full{
@@ -62,6 +45,7 @@ padding:2em;
 
 .input_event{
   font-size: 14px;
+  text-align: left;
 }
 
 select {
@@ -71,27 +55,21 @@ select {
 textarea {
   width: 100%;
 }
-/*
-.fullest{
-  width: 245%;
 
-
+.envoyer {
+  text-align: center;
 }
 
-.fullest1{
-  width: 200%;
-
+input{
+  text-align: center;
 }
 
-.fullest2{
-  width: 260%;
-
+.center{
+  text-align: left
 }
 
-.fullest3{
-  width :270%;
-
-}*/
-
-
-
+.image{
+  position: absolute;
+  bottom: -15px;
+  left: 80px;
+}

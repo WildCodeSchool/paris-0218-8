@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "install:dep": "npm install && npm install server",
     "client": "serve client",
     "server": "nodemon server --ignore client --ignore '*.json'",
     "test": "echo 'no tests'",

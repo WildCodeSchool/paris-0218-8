@@ -56,6 +56,7 @@ app.post('/signup', (request, response, next) => {
     phone: body.phone,
     message: body.message,
     photo: `https://randomuser.me/api/portraits/${n & 1 ? 'wo' : ''}men/${n}.jpg`
+
   }
 
   writeFile(filepath, JSON.stringify(user, null, 2), 'utf8')

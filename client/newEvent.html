@@ -22,12 +22,14 @@
 	<div class="row">
 
 		<div class="form-group col-sm-6">
-			<label for="namevent" class="h4">Nom de l'évènement :</label>
+			<label for="namevent" class="h4">Nom de l'évènement :
+			</label>
 			<br>
-			<input type="text" class="form-control" id="name" placeholder="Entre un evenement" required>
+			<input type="text" class="form-control input_event" id="name" placeholder="Entre un evenement" required>
 		</div>
 		<div class="form-group col-sm-6">
-			<label for="party" class="h4">Veuillez choisir la meilleure date pour la soirée :</label>
+			<label for="party" class="h4">Veuillez choisir la meilleure date pour la soirée :
+			</label>
 			<br>
 			<input class="full" type="date" id="add-event-date" name="date" min="2018-04-01" max="2020-12-31" required>
 		</div>
@@ -39,18 +41,19 @@
 		<div class="form-group col-sm-6">
 			<label for="namevent" class="h4">
 				Sélectionner le type de jeux :
-				<br>
-				<select id="choix_jeux" name="game" class="fullest">
-					<option>jeux de société</option>
-					<option>jeux de rôle</option>
-					<option>jeux de casino</option>
-				</select>
 			</label>
+			<br>
+			<select id="choix_jeux" name="game">
+				<option>jeux de société</option>
+				<option>jeux de rôle</option>
+				<option>jeux de casino</option>
+			</select>
 		</div>
 
 		<div class="form-group col-sm-6">
 			<label for="namevent" class="h4">
 				Sélectionner le style vestimentaire :
+			</label>
 				<br>
 				<select id="choix_style" name="style" class="fullest1">
 					<br>
@@ -58,7 +61,6 @@
 					<option>Fun - partie déguisée</option>
 					<option>Oscar - tenue chic exigée</option>
 				</select>
-			</label>
 		</div>
 	</div>
 <br>
@@ -66,6 +68,7 @@
 		<div class="form-group col-sm-6">
 			<label for="namevent" class="h4">
 				Sélectionner le sexe :
+			</label>
 				<br>
 				<select id="choix_sexe" name="sexe" class="fullest2">
 					<br>
@@ -79,15 +82,14 @@
 					<option>Enfants - Filles</option>
 					<option>Enfants - Garçons</option>
 				</select>
-			</label>
 		</div>
 
 		<div class="form-group col-sm-6">
 			<label for="namevent" class="h4">
 				Description :
+			</label>
 				<br>
 				<textarea class="fullest3" id="add-event-description" name="description" placeholder="Décrivez votre evenenement" required></textarea>
-			</label>
 		</div>
 	</div>
 <br>
@@ -97,16 +99,16 @@
 		<label for="namevent" class="h4">
 			Adresse :
 			<br>
-			<textarea class="fullest3" id="add-event-address" name="address" required></textarea>
 		</label>
+		<textarea class="fullest3" id="add-event-address" name="address" required></textarea>
 	</div>
 
 	<div class="form-group col-sm-6">
 		<label for="namevent" class="h4">
 			Nombre de personnes :
 			<br>
-			<textarea class="fullest3" id="add-people-number" name="people" required></textarea>
 		</label>
+		<textarea class="fullest3" id="add-people-number" name="people" required></textarea>
 
 	</div>
 </div>

@@ -36,7 +36,7 @@ font-size: 3.5em;
 }
 
 .row{
-  background-color:#fafca4 ;
+  background-color:white ;
   opacity: 0.8;
   border-radius:5px;
   border:1px solid grey;
@@ -52,13 +52,26 @@ padding:2em;
 }
 
 .contall{
-  background-image: url("http://www.waouo.com/wp-content/uploads/2012/05/ballonfete.jpg");
+  background-image: url("http://www.trentotto.fr/wp-content/uploads/2017/11/trentotto_WildWolf_jeux-de-soci%C3%A9t%C3%A9_games-room.jpg");
 }
 
 .full{
   width: 100%;
-
+  max-width: 100%;
 }
+
+.input_event{
+  font-size: 14px;
+}
+
+select {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+}
+/*
 .fullest{
   width: 245%;
 
@@ -78,7 +91,7 @@ padding:2em;
 .fullest3{
   width :270%;
 
-}
+}*/
 
 
 

@@ -12,71 +12,93 @@
 </head>
 
 <body>
-    <header id="navDyn"></header>
-    <section>
-        <input id="lastname" type="text" name="lastname" placeholder="Pseudo">
-        <input id="lastname" type="text" name="lastname" placeholder="mot de passe">
-        <button id="button" type="submit">Envoyez</button>
-        <p>enregistrez-vous via votre application</p>
-        <!-- içi lien pour enregistrement via gmail, twitter et facebook -->
-        <p>- Ou inscrivez-vous -</p>
-    </section>
-    <div class="container">
-        <div class="wrapper animated bounceInLeft">
-            <div class="company-info">
-                <h1>Formulaire d'inscription</h1>
-            </div>
-            <div class="contact">
-                <form id="signup-form">
-                    <p>
-                        <label>Nom</label>
-                        <input id="lastname" type="text" name="lastname">
-                    </p>
-                    <p>
-                        <label>Prénom</label>
-                        <input id="firstname" type="text" name="firstname">
-                    </p>
-                    <p>
-                        <label>Pseudo</label>
-                        <input id="username" type="text" name="username">
-                    </p>
-                    <p>
-                        <label>Adresse email</label>
-                        <input id="mail" type="email" name="email">
-                    </p>
-                    <p>
-                        <label>Mot de passe</label>
-                        <input id="password" type="text" name="password">
-                    </p>
-                    <p>
-                        <label>Confirmez votre mot de passe</label>
-                        <input id="confirmpass" type="text" name="confirmpass">
-                    </p>
-                    <p>
-                        <label>Numéro de téléphone</label>
-                        <input id="phone" type="text" name="phone">
-                    </p>
-                    <p>
-                        <label>photo de profil</label>
-                        <input id="upload_pic" type="file" name="pic" accept="image">
-                    </p>
-                    <p class="full">
-                        <label>Biographie</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Parlez-nous un peu de vous..."></textarea>
-                    </p>
-                    <p class="full">
-                        <button type="submit">Envoyez</button>
-                    </p>
-                </form>
-            </div>
-        </div>
-    </div>
-    <script type="module" src="js/login.js"></script>
-    <script id="scriptbootstrap"></script>
-     <!-- script boostrap -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<header id="navDyn"></header>
+
+
+	<div id="auth"></div>
+
+	<form id="sign-in-form">
+		<label>login: <input name="login"></label>
+		<label>password: <input name="password" type="password"></label>
+		<input type="submit" value="login">
+	</form>
+
+	<form id="sign-out-form">
+		<input type="submit" value="logout">
+	</form>
+
+	<div id="message" style="color: red"></div>
+
+<!--
+
+
+	<section>
+		<input id="lastname" type="text" name="lastname" placeholder="Pseudo">
+		<input id="lastname" type="text" name="lastname" placeholder="mot de passe">
+		<button id="button" type="submit">Envoyez</button>
+		<p>enregistrez-vous via votre application</p>
+		 içi lien pour enregistrement via gmail, twitter et facebook
+		<p>- Ou inscrivez-vous -</p>
+	</section> -->
+
+	<div class="container">
+		<div class="wrapper animated bounceInLeft">
+			<div class="company-info">
+				<h1>Formulaire d'inscription</h1>
+			</div>
+			<div class="contact">
+				<form id="signup-form">
+					<p>
+						<label>Nom</label>
+						<input id="lastname" type="text" name="lastname">
+					</p>
+					<p>
+						<label>Prénom</label>
+						<input id="firstname" type="text" name="firstname">
+					</p>
+					<p>
+						<label>Pseudo</label>
+						<input id="username" type="text" name="username">
+					</p>
+					<p>
+						<label>Adresse email</label>
+						<input id="mail" type="email" name="email">
+					</p>
+					<p>
+						<label>Mot de passe</label>
+						<input id="password" type="text" name="password">
+					</p>
+					<p>
+						<label>Confirmez votre mot de passe</label>
+						<input id="confirmpass" type="text" name="confirmpass">
+					</p>
+					<p>
+						<label>Numéro de téléphone</label>
+						<input id="phone" type="text" name="phone">
+					</p>
+					<p>
+						<label>photo de profil</label>
+						<input id="upload_pic" type="file" name="pic" accept="image">
+					</p>
+					<p class="full">
+						<label>Biographie</label>
+						<textarea id="message" name="message" rows="5" placeholder="Parlez-nous un peu de vous..."></textarea>
+					</p>
+					<p class="full">
+						<button type="submit">Envoyez</button>
+					</p>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="module" src="js/login.js"></script>
+	<script type="module" src="js/index.js"></script>
+
+
+	<!-- script boostrap -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -37,8 +37,8 @@ app.use(session({
 }))
 
 
-  const filename = `user-${id}.json`
-  const filepath = path.join(__dirname, './mock/users/', filename)
+  // const filename = `user-${id}.json`
+  // const filepath = path.join(__dirname, './mock/users/', filename)
 
 //Users (hard coded here but consider it comes from database)
 const users = [

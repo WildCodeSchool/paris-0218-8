@@ -5,12 +5,14 @@
 .profilePic {
   width: 220px;
   height: 220px;
-  border-style: solid;
-  border-width: 10px;
-  border-color: #05a7ad;
 }
 
-.backgroundImg {
+.backgroundColor {
+  height: 200px;
+  width: 100%;
+  background-color: #F2C23E;
+  z-index: -1;  
+  position: absolute;
 }
 
 .profileDetail {
@@ -24,3 +26,10 @@
   font-size: 12px;
 }
 
+.profileElements {
+  margin: 100px auto;
+  max-width: 70%;
+  border: solid 2px #05a7ad;
+  border-radius: 15px;
+  padding: 15px;
+}

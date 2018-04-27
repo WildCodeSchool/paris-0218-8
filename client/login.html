@@ -1,82 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <title>Game Society</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/layout.css">
-  <!-- <link rel="stylesheet" href="css/login.css"> -->
-</head>
-
-<body>
+    <head>
+        <meta charset="utf-8">
+        <title>Game Society</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit=no>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/layout.css">
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body>
     <header id="navDyn"></header>
-    <section>
-        <input id="lastname" type="text" name="lastname" placeholder="Pseudo">
-        <input id="lastname" type="text" name="lastname" placeholder="mot de passe">
-        <button id="button" type="submit">Envoyez</button>
-        <p>enregistrez-vous via votre application</p>
-        <!-- içi lien pour enregistrement via gmail, twitter et facebook -->
-        <p>- Ou inscrivez-vous -</p>
-    </section>
+    <hr>
+    <form>
+        <h1>Connexion</h1>
+        <div class="jumbotron offset-3 col-lg-6">
+            <div class="form-group offset-3 col-lg-6">
+                <label for="exampleInputEmail1">Entrez votre adresse mail :</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Adresse mail">
+                <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group offset-3 col-lg-6">
+                <label for="exampleInputPassword1">Entrez votre mot de passe :</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
+            </div>
+            <div class="form-check  offset-6 col-lg">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
+            </div>
+            <div class="form-check col-lg">
+            <button type="submit" class="btn btn-info btn-lg offset-6">Envoyez</button>
+        </div>
+        </div>    
+    </form>
+
+      
+    
     <div class="container">
         <div class="wrapper animated bounceInLeft">
             <div class="company-info">
+                <hr>
+
                 <h1>Formulaire d'inscription</h1>
-            </div>
-            <div class="contact">
-                <form id="signup-form">
-                    <p>
-                        <label>Nom</label>
-                        <input id="lastname" type="text" name="lastname">
-                    </p>
-                    <p>
-                        <label>Prénom</label>
-                        <input id="firstname" type="text" name="firstname">
-                    </p>
-                    <p>
-                        <label>Pseudo</label>
-                        <input id="username" type="text" name="username">
-                    </p>
-                    <p>
-                        <label>Adresse email</label>
-                        <input id="mail" type="email" name="email">
-                    </p>
-                    <p>
-                        <label>Mot de passe</label>
-                        <input id="password" type="text" name="password">
-                    </p>
-                    <p>
-                        <label>Confirmez votre mot de passe</label>
-                        <input id="confirmpass" type="text" name="confirmpass">
-                    </p>
-                    <p>
-                        <label>Numéro de téléphone</label>
-                        <input id="phone" type="text" name="phone">
-                    </p>
-                    <p>
-                        <label>photo de profil</label>
-                        <input id="upload_pic" type="file" name="pic" accept="image">
-                    </p>
-                    <p class="full">
-                        <label>Biographie</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Parlez-nous un peu de vous..."></textarea>
-                    </p>
-                    <p class="full">
-                        <button type="submit">Envoyez</button>
-                    </p>
-                </form>
+
+                <div class="jumbotron offset-2 col-lg-8">
+                    <div class="contact">
+                        <form id="signup-form">
+                            <div class="row">
+                                <p class="col-lg">
+                                    <label>Nom</label><br>
+                                    <input id="lastname" type="text" name="lastname">
+                                </p>
+                                <p class="col-lg">
+                                    <label>Prénom</label><br>
+                                    <input id="firstname" type="text" name="firstname">
+                                </p>
+                                <p class="col-lg">
+                                    <label>Pseudo</label><br>
+                                    <input id="username" type="text" name="username">
+                                </p>
+                            </div>
+                            <div class="row">
+                                <p class="col-6">
+                                    <label>Adresse email</label><br>
+                                    <input id="mail" type="email" name="email">
+                                </p>
+                                <p class="col-6">
+                                    <label>Confirmer votre adresse email</label><br>
+                                    <input id="confirmMail" type="email" name="confirmail">
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg">
+                                    <label for="exampleInputPassword1">Mot de passe :</label><br>
+                                    <input id="password" type="text" name="password">
+                                </div>
+                                <div class="form-group col-lg">
+                                    <label for="exampleInputPassword1">Confirmer vortre mot de passe :</label><br>
+                                    <input id="confirmpass" type="text" name="confirmpass">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg">
+                                    <label for="exampleFormControlFile1">Photo de profil</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                </div>
+                                <p class="col-6">
+                                    <label>Numéro de téléphone</label><br>
+                                    <input id="phone" type="text" name="phone">
+                                </p>
+                            </div>
+                            <div class="row">
+                                <p class="form-group col-12">
+                                    <label>Biographie</label><br>
+                                    <textarea id="message" name="message" rows="3" placeholder="Parlez-nous un peu de vous..."></textarea>
+                                </p>
+                                <p class="form-group col-lg">
+                                    <button type="submit" class="btn btn-info btn-lg offset-10">Envoyez</button>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <script type="module" src="js/login.js"></script>
-    <script id="scriptbootstrap"></script>
-     <!-- script boostrap -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
 
+<script type="module" src="js/login.js"></script>
+<script id="scriptbootstrap"></script>
+<!-- script boostrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
 </html>

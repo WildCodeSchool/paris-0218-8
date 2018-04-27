@@ -22,7 +22,7 @@ background:
 
 .company-info h1, .company-info ul{
 text-align: center;
-
+font-family: 'quicksand';
 color : white;
 font-size: 3.5em;
 }

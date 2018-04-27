@@ -131,7 +131,7 @@ ul{
   transition: background-color 0.5s ease-out;
 }
 
-LARGE SCREENS 
+LARGE SCREENS
 @media(min-width:700px){
   .wrapper{
     display: grid;

@@ -19,15 +19,8 @@ li {
 }
 
 .navbar-nav>li {
-    padding: 0 40px;
-}
-
-.colorstyle {
-    color: #05a7ad !important;
-}
-
-#login {
-    font-size: 1rem;
+    padding: 0 80px;
+    border-bottom: 5px solid #ffd74f;
 }
 
 /*Carousel*/
@@ -36,6 +29,30 @@ li {
 width:auto;
 height :38vw;
 }
+
+/*Carousel*/
+
+
+
+
+ /*Dernières parties*/
+
+ #visit-second{
+   @extend %visit;
+   background-color: #05a7ad;
+   color: white;  
+   padding: 10px 20px;
+ }
+ 
+ 
+ .visit-img{
+   border: 10px solid white;
+   text-align: center;
+ }
+ 
+ #visit-header{
+   text-align: center;
+ }
 
 /* Footer */
 
@@ -56,6 +73,5 @@ footer span {
     font-size: 20px;
 }
 
-.adept {
 
-}
+

@@ -1,92 +1,121 @@
 <!DOCTYPE html>
 <html>
-    <head>
-  <meta charset="utf-8">
-  <title>Nouvel Evenement</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/layout.css">
-  <!-- <link rel="stylesheet" type="text/css" href="css/newEvent.css"> -->
-    </head>
+<head>
+	<meta charset="utf-8">
+	<title>Nouvel Evenement</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/newEvent.css">
+</head>
 
 <body>
-    <header id="navDyn"></header>
-    <div class="container">
-        <!-- <h1 class="brand">Créer votre évènement</h1> -->
-        <div class="wrapper animate bounceInLeft">
-            <div class="company-info">
-                <h1>Créer votre évènement</h1>
-                <!-- <ul>
-            <li><i class="fa fa-road"></i> 11 rue de poissy</li>
-            <li><i class="fa fa-phone"></i> 0658743091</li>
-            <li><i class="fa fa-envelope"></i> www.wildcodeshool.fr</li>
-          </ul> -->
-            </div>
-            <div class="contact">
-                <form id="add-new-event">
-                    <label>
-                        Nom de l'évènement :
-                        <input type="text" id="add-event-title" name="title">
-                    </label>
-                    <label for="party">Veuillez choisir la meilleure date pour la soirée :
-                        <input type="date" id="add-event-date" name="date" min="2018-04-01" max="2020-12-31">
-                    </label>
-                    <label>
-                        Sélectionner le type de jeux :
-                        <select id="choix_jeux" name="game">
-                            <br>
-                            <option>jeux de société</option>
-                            <option>jeux de rôle</option>
-                            <option>jeux de casino</option>
-                        </select>
-                    </label>
-                    <label>
-                        Sélectionner le style vestimentaire :
-                        <select id="choix_style" name="style">
-                            <br>
-                            <option>Cool - on reste décontracté</option>
-                            <option>Fun - partie déguisée</option>
-                            <option>Oscar - tenue chic exigée</option>
-                        </select>
-                    </label>
-                    <label>
-                        Sélectionner le sexe :
-                        <select id="choix_sexe" name="sexe">
-                            <br>
-                            <option>Adultes - Mixtes</option>
-                            <option>Adultes - Femmes</option>
-                            <option>Adultes - Hommes</option>
-                            <option>Ados - Mixtes (14-18ans)</option>
-                            <option>Adolescentes (14- 18ans</option>
-                            <option>Adolescents (14 - 18ans)</option>
-                            <option>Enfants - Mixtes</option>
-                            <option>Enfants - Filles</option>
-                            <option>Enfants - Garçons</option>
-                        </select>
-                    </label>
-                    <label>
-                        Description :
-                        <textarea id="add-event-description" name="description"></textarea>
-                    </label>
-                    <label>
-                        Adresse :
-                        <textarea id="add-event-address" name="address"></textarea>
-                    </label>
-                    <label>
-                        Nombre de personnes :
-                        <textarea id="add-people-number" name="people"></textarea>
-                    </label>
-                    <input id="button" type="submit" value="Envoyez">
-                </form>
-            </div>
-        </div>
-    </div>
-    <script type='module' src="js/newEventForm.js"></script>
-    <!-- script boostrap -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
 
-</html>
+	<header id="navDyn"></header>
+	<br>
+	<div class="contall">
+		<div class="company-info">
+			<h1>Créer votre évènement</h1>
+		</div>
+
+		<div class="container">
+
+			<div class="form-group col-sm-6 offset-3 ">
+				<label for="namevent" class="h4">Nom de l'évènement :
+				</label>
+
+				<input type="text" class="form-control input_event" id="name" placeholder="Entre un evenement" required>
+			</div>
+			<div class="form-group col-sm-6 offset-3 ">
+				<label for="party" class="h4">Veuillez choisir la meilleure date pour la soirée :
+				</label>
+				<input class="full" type="date" id="add-event-date" name="date" min="2018-04-01" max="2020-12-31" required>
+			</div>
+
+
+
+			<div class="form-group col-sm-6 offset-3">
+				<label for="namevent" class="h4">
+					Sélectionner le type de jeux :
+				</label>
+				<select id="choix_jeux" name="game">
+					<option>jeux de société</option>
+					<option>jeux de rôle</option>
+					<option>jeux de casino</option>
+				</select>
+			</div>
+
+			<div class="form-group col-sm-6 offset-3">
+				<label for="namevent" class="h4">
+					Sélectionner le style vestimentaire :
+				</label>
+				<select id="choix_style" name="style">
+
+					<option>Cool - on reste décontracté</option>
+					<option>Fun - partie déguisée</option>
+					<option>Oscar - tenue chic exigée</option>
+				</select>
+			</div>
+
+			<div class="form-group col-sm-6 offset-3">
+				<label for="namevent" class="h4">
+					Sélectionner le sexe :
+				</label>
+				<select id="choix_sexe" name="sexe">
+					<br>
+					<option>Adultes - Mixtes</option>
+					<option>Adultes - Femmes</option>
+					<option>Adultes - Hommes</option>
+					<option>Ados - Mixtes (14-18ans)</option>
+					<option>Adolescentes (14- 18ans</option>
+					<option>Adolescents (14 - 18ans)</option>
+					<option>Enfants - Mixtes</option>
+					<option>Enfants - Filles</option>
+					<option>Enfants - Garçons</option>
+				</select>
+			</div>
+
+			<div class="form-group col-sm-6 offset-3">
+				<label for="namevent" class="h4">
+					Description :
+				</label>
+
+				<textarea id="add-event-description" name="description" placeholder="Décrivez votre evenenement" required></textarea>
+			</div>
+
+			<div class="form-group col-sm-6 offset-3">
+
+				<label for="namevent" class="h4">
+					Adresse :
+				</label>
+				<textarea id="add-event-address" name="address" required></textarea>
+			</div>
+
+			<div class="form-group col-sm-6 offset-3">
+				<label for="namevent" class="h4">
+					Nombre de personnes :
+
+				</label>
+				<textarea class="fullest3" id="add-people-number" name="people" required></textarea>
+
+			</div>
+
+			<div class="envoyer">
+				<input id="button" type="submit" value="Envoyez">
+			</div>
+		</div>
+	</div>
+
+	<div class="image">
+		<a href="http://www.gifsanimes.fr/anime/"><img src="http://www.gifsanimes.fr/anime/anime/hamtaro/hamtaro-gifs-animes-3116163.gif" border="0" /></a>
+		</div>
+
+		<script type='module' src="js/newEventForm.js"></script>
+		<!-- script boostrap -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</body>
+
+	</html>

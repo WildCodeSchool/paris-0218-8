@@ -22,10 +22,6 @@ export const createNavbarElement = () =>
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item active">
-        <a class="nav-link colorstyle" href="active" href="#game">Les jeux <span class="sr-only">(current)</span></a>
-      </li>
-
-      <li class="nav-item active">
         <a class="nav-link colorstyle" href="map.html">La communauté <span class="sr-only">(current)</span></a>
       </li>
 
@@ -38,8 +34,8 @@ export const createNavbarElement = () =>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link colorstyle" href="login.html">Inscription/Connexion <span class="sr-only">(current)</span></a>
-      </li>   
+        <button><a class="nav-link colorstyle" href="login.html">Inscription/Connexion <span class="sr-only">(current)</span></a></button>
+      </li>
     </ul>
     </div>
 </nav>`

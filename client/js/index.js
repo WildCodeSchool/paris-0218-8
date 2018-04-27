@@ -33,11 +33,9 @@ const handleAuth = res => {
 signInForm.addEventListener('submit', e => {
   e.preventDefault()
 
-  const formData = new FormData(e.target)
-
   const credentials = {
-    login: formData.get('login'),
-    password: formData.get('password')
+    login: document.getElementById('login').value,
+    password: document.getElementById('password').value
   }
 
   fetch('http://localhost:8080/sign-in', {

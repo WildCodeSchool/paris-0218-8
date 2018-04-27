@@ -1,5 +1,4 @@
 /* global fetch, URLSearchParams */
-
 import { createEventDetailElement } from './component/event.js'
 import { createNavbarElement } from './component/nav.js'
 

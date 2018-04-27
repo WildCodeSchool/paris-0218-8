@@ -1,0 +1,35 @@
+.profileName {
+    font-size: 25px;
+}
+
+.profilePic {
+    width: 220px;
+    height: 220px;
+}
+
+.backgroundColor {
+    height: 200px;
+    width: 100%;
+    background-color: #F2C23E;
+    z-index: -1;
+    position: absolute;
+}
+
+.profileDetail {
+    font-size: 20px;
+}
+
+.sendButton {
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.profileElements {
+    margin: 100px auto;
+    max-width: 70%;
+    border: solid 2px #05A7AD;
+    border-radius: 15px;
+    padding: 15px;
+}

@@ -1,11 +1,10 @@
 /* global fetch */
+import { createUserElement } from './component/user.js'
+import { createNavbarElement } from './component/nav.js'
 const authElement = document.getElementById('auth')
 const messageElement = document.getElementById('message')
 const signInForm = document.getElementById('sign-in-form')
 const signOutForm = document.getElementById('sign-out-form')
-
-import { createUserElement } from './component/user.js'
-import { createNavbarElement } from './component/nav.js'
 
 document.getElementById('navDyn').innerHTML = createNavbarElement()
 
@@ -18,7 +17,6 @@ fetch('http://localhost:8080/users')
 
     usersElement.innerHTML = userElements
   })
-
 
 const handleAuth = res => {
   const login = res.login
@@ -45,13 +43,13 @@ signInForm.addEventListener('submit', e => {
   fetch('http://localhost:8080/sign-in', {
     method: 'post',
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
     },
     'credentials': 'include', // Always send user credentials (cookies, basic http auth, etc..), even for cross-origin calls.
     body: JSON.stringify(credentials)
   })
-  .then(res => res.json())
-  .then(handleAuth)
+    .then(res => res.json())
+    .then(handleAuth)
 })
 
 signOutForm.addEventListener('submit', e => {
@@ -62,13 +60,9 @@ signOutForm.addEventListener('submit', e => {
     .then(handleAuth)
 })
 
-
 fetch('http://localhost:8080/', { 'credentials': 'include' })
   .then(res => res.json())
-.then(handleAuth)
-
-
-
+  .then(handleAuth)
 
 // effet fade in sur le bloc Concept
 /*

@@ -1,5 +1,5 @@
 export const createNavbarElement = () =>
-  /*`
+  /* `
   <nav>
     <ul class="nav_ul">
       <li class="nav_li"><a href="http://localhost:5000/"><img src="../../img/Logo_Game_Society.jpg" height="90" alt="Logo_Game_Society"></a></li>

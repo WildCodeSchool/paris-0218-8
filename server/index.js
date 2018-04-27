@@ -14,11 +14,8 @@ const secret = 'something unbelievable'
 
 const app = express()
 
-
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-
-
 
 app.use((request, response, next) => {
   response.header('Access-Control-Allow-Origin', request.headers.origin)
@@ -27,24 +24,22 @@ app.use((request, response, next) => {
   next()
 })
 
-
 // Setup session handler
 app.use(session({
   secret,
   saveUninitialized: false,
   resave: true,
-  store: new FileStore({ secret }),
+  store: new FileStore({ secret })
 }))
 
+// const filename = `user-${id}.json`
+// const filepath = path.join(__dirname, './mock/users/', filename)
 
-  // const filename = `user-${id}.json`
-  // const filepath = path.join(__dirname, './mock/users/', filename)
-
-//Users (hard coded here but consider it comes from database)
+// Users (hard coded here but consider it comes from database)
 const users = [
-      { login: 'bertrand', password: 'azerty123' },
-      { login: 'martine', password: 'rosedamour' }
-    ]
+  { login: 'bertrand', password: 'azerty123' },
+  { login: 'martine', password: 'rosedamour' }
+]
 
 // Logger middleware
 app.use((req, res, next) => {
@@ -92,9 +87,6 @@ app.use((err, req, res, next) => {
   next(err)
 })
 
-
-
-
 // app.use((request, response, next) => {
 //   if (request.method === 'GET') return next()
 //   let accumulator = ''
@@ -116,11 +108,9 @@ app.use((request, response, next) => {
   next()
 })
 
-
 app.get('/', (request, response) => {
   response.send('OK')
 })
-
 
 app.post('/signup', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(11, '0')

@@ -3,7 +3,6 @@
 import { createEventDetailElement } from './component/event.js'
 import { createNavbarElement } from './component/nav.js'
 
-
 document.getElementById('navDyn').innerHTML = createNavbarElement()
 
 const eventElement = document.getElementById('specificEvent')

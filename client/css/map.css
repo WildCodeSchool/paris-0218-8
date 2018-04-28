@@ -19,6 +19,8 @@ width: 100%;
 
 .nav_li {
 	display: inline;
+	height: 70;
+	width: 70;
 }
 
 .nav_li a {

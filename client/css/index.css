@@ -3,3 +3,7 @@ text-shadow: 2px 2px 5px #000;
     text-transform: uppercase;
 }
 
+.d-block img-fluid {
+  width: 100%;
+}
+

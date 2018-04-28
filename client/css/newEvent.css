@@ -70,4 +70,5 @@ input {
     position: absolute;
     bottom: -15px;
     left: 80px;
+    border: 0;
 }

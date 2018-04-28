@@ -1,4 +1,5 @@
 /* global fetch, URLSearchParams */
+/* eslint-disable eol-last */
 import { createEventDetailElement } from './component/event.js'
 import { createNavbarElement } from './component/nav.js'
 

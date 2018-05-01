@@ -19,7 +19,7 @@ form.addEventListener('submit', e => {
     sexe: document.getElementById('choix_sexe').value
   }
 
-  fetch('http://localhost:8080/newEvent', {
+  fetch('http://localhost:8080/newevent', {
     method: 'post',
     body: JSON.stringify(event)
   }).then(res => console.log(res.status))

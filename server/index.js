@@ -87,21 +87,21 @@ app.use((err, req, res, next) => {
   next(err)
 })
 
-// app.use((request, response, next) => {
-//   if (request.method === 'GET') return next()
-//   let accumulator = ''
-//   request.on('data', data => {
-//     accumulator += data
-//   })
-//   request.on('end', () => {
-//     try {
-//       request.body = JSON.parse(accumulator)
-//       next()
-//     } catch (err) {
-//       next(err)
-//     }
-//   })
-// })
+app.use((request, response, next) => {
+  if (request.method === 'GET') return next()
+  let accumulator = ''
+  request.on('data', data => {
+    accumulator += data
+  })
+  request.on('end', () => {
+    try {
+      request.body = JSON.parse(accumulator)
+      next()
+    } catch (err) {
+      next(err)
+    }
+  })
+})
 
 app.use((request, response, next) => {
   console.log(request.url)
@@ -141,10 +141,10 @@ app.post('/newevent', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(11, '0')
   const filename = `event-${id}.json`
   const filepath = path.join(__dirname, './mock/events/', filename)
-
+  console.log('request.body : ', request.body)
   const event = request.body
   event.id = id
-
+  console.log(event)
   writeFile(filepath, JSON.stringify(event, null, 2), 'utf8')
     .then(() => response.json('OK'))
     .catch(next)

@@ -1,81 +1,83 @@
 <!-- htmllint id-class-style="false" -->
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Nouvel Evenement</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
-		<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="css/layout.css">
-		<link rel="stylesheet" type="text/css" href="css/newEvent.css">
-	</head>
-	<body>
+<head>
+	<meta charset="utf-8">
+	<title>Nouvel Evenement</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/newEvent.css">
+</head>
+<body>
 	<header id="navDyn"></header>
 	<br>
 	<div class="contall">
 		<div class="company-info">
-			<h1>Créer votre évènement</h1>
+			<h1>Créez votre évènement</h1>
 		</div>
 		<div class="container">
+				<form id="add-new-event">
 			<div class="form-group col-sm-6 offset-3 ">
-				<label class="h4">Nom de l'évènement :
-				<input type="text" class="form-control input_event" id="name" placeholder="Entre un evenement" required>
-				</label>
+					<label class="h4">Nom de l'évènement :
+						<input type="text" class="form-control input_event" id="add-event-title"placeholder="Entre un evenement" required>
+					</label>
 			</div>
-			<div class="form-group col-sm-6 offset-3 ">
-				<label class="h4">Veuillez choisir la meilleure date pour la soirée :
-				<input class="full" type="date" id="add-event-date" name="date" min="2018-04-01" max="2020-12-31" required>
-				</label>
+				<div class="form-group col-sm-6 offset-3 ">
+					<label class="h4">Veuillez choisir la meilleure date pour la soirée :
+						<input class="full" type="date" id="add-event-date" name="date" min="2018-04-01" max="2020-12-31" required>
+					</label>
+				</div>
+				<div class="form-group col-sm-6 offset-3">
+					<label class="h4">
+						Sélectionner le type de jeux :
+						<select id="choix_jeux" name="game">
+							<option>jeux de société</option>
+							<option>jeux de rôle</option>
+							<option>jeux de casino</option>
+						</select>
+					</label>
+				</div>
+				<div class="form-group col-sm-6 offset-3">
+					<p class="h4">Sélectionner le style vestimentaire :</p>
+					<select id="choix_style" name="style">
+						<option>Cool - on reste décontracté</option>
+						<option>Fun - partie déguisée</option>
+						<option>Oscar - tenue chic exigée</option>
+					</select>
+				</div>
+				<div class="form-group col-sm-6 offset-3">
+					<p class="h4">Sélectionner vos partenaires :</p>
+					<select id="choix_sexe" name="sexe">
+						<br>
+						<option>Adultes - Mixtes</option>
+						<option>Adultes - Femmes</option>
+						<option>Adultes - Hommes</option>
+						<option>Ados - Mixtes (14 - 18ans)</option>
+						<option>Adolescentes (14 - 18ans)</option>
+						<option>Adolescents (14 - 18ans)</option>
+						<option>Enfants - Mixtes</option>
+						<option>Enfants - Filles</option>
+						<option>Enfants - Garçons</option>
+					</select>
+				</div>
+				<div class="form-group col-sm-6 offset-3">
+					<p class="h4"> Description : </p>
+					<textarea id="add-event-description" name="description" placeholder="Décrivez votre evenenement" required></textarea>
+				</div>
+				<div class="form-group col-sm-6 offset-3">
+					<p class="h4"> Adresse : </p>
+					<textarea id="add-event-address" name="address" required></textarea>
+				</div>
+				<div class="form-group col-sm-6 offset-3">
+					<p class="h4">Nombre de personnes :</p>
+					<textarea class="fullest3" id="add-people-number" name="people" required></textarea>
+				</div>
+				<div class="envoyer">
+					<button type="submit" class="btn btn-info btn-lg offset-0">Envoyez</button>
 			</div>
-			<div class="form-group col-sm-6 offset-3">
-				<label class="h4">
-					Sélectionner le type de jeux :
-				<select id="choix_jeux" name="game">
-					<option>jeux de société</option>
-					<option>jeux de rôle</option>
-					<option>jeux de casino</option>
-				</select>
-				</label>
-			</div>
-			<div class="form-group col-sm-6 offset-3">
-				<p class="h4">Sélectionner le style vestimentaire :</p>
-				<select id="choix_style" name="style">
-					<option>Cool - on reste décontracté</option>
-					<option>Fun - partie déguisée</option>
-					<option>Oscar - tenue chic exigée</option>
-				</select>
-			</div>
-			<div class="form-group col-sm-6 offset-3">
-				<p class="h4">Sélectionner le sexe :</p>
-				<select id="choix_sexe" name="sexe">
-					<br>
-					<option>Adultes - Mixtes</option>
-					<option>Adultes - Femmes</option>
-					<option>Adultes - Hommes</option>
-					<option>Ados - Mixtes (14-18ans)</option>
-					<option>Adolescentes (14- 18ans</option>
-					<option>Adolescents (14 - 18ans)</option>
-					<option>Enfants - Mixtes</option>
-					<option>Enfants - Filles</option>
-					<option>Enfants - Garçons</option>
-				</select>
-			</div>
-			<div class="form-group col-sm-6 offset-3">
-				<p class="h4"> Description : </p>
-				<textarea id="add-event-description" name="description" placeholder="Décrivez votre evenenement" required></textarea>
-			</div>
-			<div class="form-group col-sm-6 offset-3">
-				<p class="h4"> Adresse : </p>
-				<textarea id="add-event-address" name="address" required></textarea>
-			</div>
-			<div class="form-group col-sm-6 offset-3">
-				<p class="h4">Nombre de personnes :</p>
-				<textarea class="fullest3" id="add-people-number" name="people" required></textarea>
-			</div>
-			<div class="envoyer">
-				<button type="submit" class="btn btn-info btn-lg offset-0">Envoyez</button>
-			</div>
+				</form>
 		</div>
 	</div>
 	<div class="image">

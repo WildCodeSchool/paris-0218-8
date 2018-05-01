@@ -63,13 +63,3 @@ input {
 .center {
     text-align: left
 }
-
-.image {
-    display: inline-block;
-    position: relative;
-
-}
-
-.row{
-    display: inline-flex;
-}

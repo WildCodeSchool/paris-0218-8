@@ -32,9 +32,6 @@
     padding: 15px;
 }
 
-.contall {
-    /*background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSEUFHJg-qSCsEAKmfmhRg9slsjfbG9AvH4rNvreqiT3AtmiAygg");*/
-}
 
 .full {
     width: 100%;
@@ -50,12 +47,13 @@ select {
     width: 100%;
 }
 
-textarea {
+textarea, label{
     width: 100%;
 }
 
 .envoyer {
     text-align: center;
+
 }
 
 input {
@@ -67,8 +65,11 @@ input {
 }
 
 .image {
-    position: absolute;
-    bottom: -15px;
-    left: 80px;
-    border: 0;
+    display: inline-block;
+    position: relative;
+
+}
+
+.row{
+    display: inline-flex;
 }

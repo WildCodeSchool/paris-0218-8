@@ -3,8 +3,8 @@
 }
 
 .profilePic {
-    width: 220px;
-    height: 220px;
+    width: 150px;
+    height: 150px;
 }
 
 .backgroundColor {
@@ -31,5 +31,6 @@
     max-width: 70%;
     border: solid 2px #05A7AD;
     border-radius: 15px;
-    padding: 15px;
+    padding: 20px ;
+
 }

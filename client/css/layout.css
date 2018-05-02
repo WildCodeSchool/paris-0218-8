@@ -18,10 +18,9 @@ li {
 }
 
 .navbar-nav > li {
-    padding: 0 40px;
-    border-bottom: 5px solid #ffd74f;
-    /*color:#05A7AD;*/
-    color:red;
+    padding: 0 78px;
+    border-bottom: 3px solid #ffd74f;
+    padding-bottom: 12px;
 }
 
 .navbar-light .navbar-nav .active >.nav-link {

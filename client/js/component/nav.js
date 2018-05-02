@@ -14,7 +14,7 @@ export const createNavbarElement = () =>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="eventsList.html">Dernière parties <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="eventsList.html">Dernières parties <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
@@ -22,7 +22,7 @@ export const createNavbarElement = () =>
       </li>
 
       <li class="nav-item active">
-        <button><a class="nav-link" href="login.html">Inscription/Connexion <span class="sr-only">(current)</span></a></button>
+        <button type="button" class="btn btn-lg btn-outline-info"<a class="nav-link" href="login.html">Inscription/Connexion <span class="sr-only">(current)</span></a></button>
       </li>
     </ul>
     </div>

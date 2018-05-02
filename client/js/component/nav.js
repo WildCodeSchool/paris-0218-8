@@ -14,11 +14,11 @@ export const createNavbarElement = () =>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="eventsList.html">Dernière parties <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="eventsList.html">Dernières parties <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="newEvent.html">Créer un évènement <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="newEvent.html">Créez un évènement <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">

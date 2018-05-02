@@ -43,4 +43,4 @@ export const createUserDetailElement = user => `
         <button type="button" class="btn btn-primary sendButton">Contacter</button>
       </div>
     </div>
-  </div>
+  </div> `

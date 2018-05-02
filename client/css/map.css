@@ -1,12 +1,5 @@
-/* Map */
-
-#map {
-height: 700px;
-width: 100%;
-}
-
 /* Navabar */
-
+/*
 .nav_ul {
 	list-style-type: none;
 	margin: 0;
@@ -38,13 +31,27 @@ width: 100%;
 nav img {
 	float: left;
 	margin-left: 20px;
+}*/
+
+
+/* Map */
+
+#map {
+height: 600px;
+width: 100%;
 }
 
-.navMap {
+/*.navMap {
 	display: inline;
 }
 
 .navMap a {
 	font-size: 25px;
-	text-align: center;	
+	text-decoration: none;
+	margin: 80px;
 }
+
+.Map {
+	text-align: center;
+}
+*/

@@ -1,126 +1,130 @@
 <!-- htmllint id-class-style="false" -->
 <!-- htmllint attr-name-style="false" -->
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Game Society</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/layout.css">
-        <link rel="stylesheet" href="css/login.css">
-    </head>
-    <body>
+
+<head>
+    <meta charset="utf-8">
+    <title>Game Society</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
     <header id="navDyn"></header>
     <hr>
     <form>
         <h1>Connexion</h1>
-        <div class="row">
-        <div class="jumbotron offset-3 col-lg-6">
-            <div class="form-group offset-3 col- col-sm-9 col-md-12 col-lg-6">
-                <label for="exampleInputEmail1">Entrez votre adresse mail :</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Adresse mail">
-                <small id="emailHelp" class="form-text text-muted"></small>
-            </div>
-            <div class="form-group offset-3 col- col-sm-9 col-md-12 col-lg-6">
-                <label for="exampleInputPassword1">Entrez votre mot de passe :</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
-            </div>
-            <div class="form-check  offset-6 col- col-sm-9 col-md-12 col-lg-6">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
-            </div>
-            <div class="form-check offset-7 col- col-sm-9 col-md-12 col-lg-6">
-                <button type="submit" class="btn btn-info btn-lg">Envoyez</button>
-            </div>
-        </div>
-    </div>
-    </form>
-    <div class="container">
-        <div class="wrapper animated bounceInLeft">
-            <div class="company-info">
-                <hr>
-                <h1>Formulaire d'inscription</h1>
-                <div class="jumbotron offset-2 col-lg-8">
-                    <div class="contact">
-                        <form id="signup-form">
-                            <div class="row">
-                                <p class="col-lg">
-                                    <label>Nom
-                                    <br>
-                                    <input id="lastname" type="text" name="lastname">
-                                    </label>
-                                </p>
-                                <p class="col-lg">
-                                    <label>Prénom
-                                    <br>
-                                    <input id="firstname" type="text" name="firstname">
-                                    </label>
-                                </p>
-                                <p class="col-lg">
-                                    <label>Pseudo
-                                    <br>
-                                    <input id="username" type="text" name="username">
-                                    </label>
-                                </p>
-                            </div>
-                            <div class="row">
-                                <p class="col-6">
-                                    <label>Adresse email
-                                    <br>
-                                    <input id="mail" type="email" name="email">
-                                    </label>
-                                </p>
-                                <p class="col-6">
-                                    <label>Confirmer votre adresse email
-                                    <br>
-                                    <input id="confirmMail" type="email" name="confirmail">
-                                    </label>
-                                </p>
-                            </div>
-                            <div class="row">
-                                <div class="form-group col-lg">
-                                    <label for="exampleInputPassword1">Mot de passe :
-                                    <br>
-                                    <input id="password" type="text" name="password">
-                                    </label>
-                                </div>
-                                <div class="form-group col-lg">
-                                    <label for="exampleInputPassword1">Confirmer vortre mot de passe :
-                                    <br>
-                                    <input id="confirmpass" type="text" name="confirmpass">
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-group col-lg">
-                                    <label for="exampleFormControlFile1">Photo de profil
-                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                    </label>
-                                </div>
-                                <p class="col-6">
-                                    <label>Numéro de téléphone
-                                    <br>
-                                    <input id="phone" type="text" name="phone">
-                                    </label>
-                                </p>
-                            </div>
-                            <div class="row">
-                                <p class="form-group col-12">
-                                    <label>Biographie
-                                    <br>
-                                    <input type="text" id="message" name="message" rows="3" placeholder="Parlez-nous un peu de vous..."></input>
-                                    </label>
-                                </p>
-                                <p class="form-group col-lg">
-                                    <button type="submit" class="btn btn-info btn-lg offset-10">Envoyez</button>
-                                </p>
-                            </div>
-                        </form>
+        <div class="container">
+            <div class="row">
+                <div class="jumbotron offset-3 col-6 col-md-3 col-lg-6">
+                    <div class="form-group offset-3 col-6">
+                        <label for="exampleInputEmail1">Entrez votre adresse mail :</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Adresse mail">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group offset-3 col-6">
+                        <label for="exampleInputPassword1">Entrez votre mot de passe :</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
+                    </div>
+                    <div class="form-check  offset-6 col-6">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
+                    </div>
+                    <div class="form-check offset-7 col-6">
+                        <button type="submit" class="btn btn-info btn-lg">Envoyez</button>
                     </div>
                 </div>
+            </div>
+         </div>
+    </form>
+    <div class="wrapper animated bounceInLeft">
+        <div class="company-info">
+            <hr>
+            <h1>Formulaire d'inscription</h1>
+            <div class="container2">
+            <div class="row">
+            <div class="jumbotron offset-3 col-6 col-md-3 col-lg-6">
+                <div class="contact">
+                    <form id="signup-form">
+                        <div class="row">
+                            <p class="col-lg-4">
+                                <label>Nom
+                                    <br>
+                                    <input id="lastname" type="text" name="lastname">
+                                </label>
+                            </p>
+                            <p class="col-lg-4">
+                                <label>Prénom
+                                    <br>
+                                    <input id="firstname" type="text" name="firstname">
+                                </label>
+                            </p>
+                            <p class="col-lg-4">
+                                <label>Pseudo
+                                    <br>
+                                    <input id="username" type="text" name="username">
+                                </label>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p class="form-group col col-lg-6">
+                                <label>Adresse email
+                                    <br>
+                                    <input id="mail" type="email" name="email">
+                                </label>
+                            </p>
+                            <p class="form-group col col-lg-6">
+                                <label>Confirmer votre adresse email
+                                    <br>
+                                    <input id="confirmMail" type="email" name="confirmail">
+                                </label>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label for="password">Mot de passe :
+                                    <br>
+                                    <input id="password" type="text" name="password">
+                                </label>
+                            </div>
+                            <div class="form-group col">
+                                <label for="confirmpass">Confirmer votre mot de passe :
+                                    <br>
+                                    <input id="confirmpass" type="text" name="confirmpass">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg">
+                                <label for="exampleFormControlFile1">Photo de profil
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                </label>
+                            </div>
+                            <p class="col-6">
+                                <label>Numéro de téléphone
+                                    <br>
+                                    <input id="phone" type="text" name="phone">
+                                </label>
+                            </p>
+                        </div>
+                        <div class="row">
+                                <div class="form-group col col-md-6 col-lg-12">
+                                    <label for="exampleFormControlTextarea1">Biographie</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Parlez-nous un peu de vous..."></textarea>
+                                </div>
+                            </p>
+                            <p class="form-group col-lg">
+                                <button type="submit" class="btn btn-info btn-lg offset-10">Envoyez</button>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+              </div> 
             </div>
         </div>
     </div>

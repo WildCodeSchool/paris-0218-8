@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-import { createHeadElement } from './component/head.js'
-document.getElementById('head').innerHTML = createHeadElement()
+import { createHeadElement } from '../map.html'
+document.getElementById('map').innerHTML = createHeadElement()
 
 const google = 'google'
 const initMap = () => {

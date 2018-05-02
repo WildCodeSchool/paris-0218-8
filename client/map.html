@@ -10,13 +10,16 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/layout.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/map.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/map.css">
 </head>
 
 <body>
     <!-- début de la Navbar -->
-    <header id="navDyn">
-    </header>
+    <header id="navDyn"></header>
+
+    <h3>Carte des évenements</h3>
+    <div id="map"></div>
+
     <section>
         <ul class="navMapall">
             <li class="navMap"><a href="#jeuxSociete">Jeux de Société</a></li>
@@ -24,8 +27,12 @@
             <li class="navMap"><a href="#casino">Casino</a></li>
         </ul>
     </section>
-    <div id="map"></div>
 
+
+    <footer>
+        <span>© 2018 Loop4</span>
+    </footer>
+<!--/Footer-->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0ahTokK3oEcltu2S3gbGrvUIHMxIotVc&callback=initMap"></script>
     <script src="js/map.js"></script>
     <script type="module" src="/js/index.js"> </script>

@@ -22,7 +22,7 @@ export const createNavbarElement = () =>
       </li>
 
       <li class="nav-item active">
-        <button><a class="nav-link" href="login.html">Inscription/Connexion <span class="sr-only">(current)</span></a></button>
+        <button><a class="nav-link button-collapse" href="login.html">Inscription/Connexion <span class="sr-only">(current)</span></a></button>
       </li>
     </ul>
     </div>

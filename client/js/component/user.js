@@ -44,3 +44,4 @@ export const createUserDetailElement = user => `
       </div>
     </div>
   </div>
+  `

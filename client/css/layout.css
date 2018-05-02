@@ -40,6 +40,7 @@ height :38vw;
  #visit-second{
    @extend %visit;
    background-color: #05a7ad;
+   opacity: 10;
    color: white;  
    padding: 10px 20px;
  }
@@ -48,6 +49,7 @@ height :38vw;
  .visit-img{
    border: 10px solid white;
    text-align: center;
+   left:25%;
  }
  
  #visit-header{

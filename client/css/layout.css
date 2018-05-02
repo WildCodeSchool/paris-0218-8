@@ -18,14 +18,22 @@ li {
 }
 
 .navbar-nav > li {
+<<<<<<< HEAD
     padding: 0 78px;
     border-bottom: 3px solid #ffd74f;
     padding-bottom: 12px;
+=======
+    padding: 0 40px;
+    border-bottom: 5px solid #ffd74f;
+    /*color:#05A7AD;*/
+
+>>>>>>> 4164eb0a7ddca6bb4486396bd22959648d6c80f1
 }
 
 .navbar-light .navbar-nav .active >.nav-link {
   color:#05A7AD;
 }
+
 
 /*Carousel*/
 
@@ -35,11 +43,13 @@ height :38vw;
 }
 
 /*Carousel*/
+
  /*Dernières parties*/
 
  #visit-second{
    @extend %visit;
    background-color: #05a7ad;
+   opacity: 10;
    color: white;
    padding: 10px 20px;
  }
@@ -48,12 +58,12 @@ height :38vw;
  .visit-img{
    border: 10px solid white;
    text-align: center;
+   left:25%;
  }
 
  #visit-header{
    text-align: center;
  }
-
 /* Footer */
 
 footer {
@@ -72,6 +82,3 @@ footer span {
     padding: 20px;
     font-size: 20px;
 }
-
-
-

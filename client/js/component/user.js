@@ -1,18 +1,17 @@
-export const createUserElement = user =>
-
-  ` <div class= "row d-flex justify-content-between ml-5" >
-    <div class="col-2">
-    <a href="profil.html?id=${user.id}" >
-      <h2 class="name mt-5">${user.username}</h2>
-      <img class="rounded-circle" src=${user.photo} style="width:150px; height:150px;">
+export const createUserElement = user =>`
+  <div class= "row ml-5" >
+    <div class="col-1">
+      <a href="profil.html?id=${user.id}" >
+        <h2 class="name mt-5">${user.username}</h2>
+        <img class="rounded-circle fit" src=${user.photo}>
       </a>
     </div>
-  <div> `
+  </div> `
 
 export const createUserDetailElement = user => `
-    <div class = "row">
-      <div class = "col-lg-12 backgroundColor"></div>
-    </div>
+  <div class = "row">
+    <div class = "col-lg-12 backgroundColor"></div>
+  </div>
   <div class="profileElements">
     <div class="row">
       <div class="col-lg-6 offset-lg-5 col-6 offset-3">
@@ -23,26 +22,26 @@ export const createUserDetailElement = user => `
       </div>
     </div>
     <div class="profileDetail">
-    <div class="row">
-      <div class="col-lg-6 offset-lg-5 col-12">
-        <p> <strong>Mail :</strong> <br> ${user.email}</p>
+      <div class="row">
+        <div class="col-lg-6 offset-lg-5 col-12">
+          <p> <strong>Mail :</strong> <br> ${user.email}</p>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 offset-lg-5 col-12">
-        <p> <strong>Téléphone :</strong> <br> ${user.phone}</p>
+      <div class="row">
+        <div class="col-lg-6 offset-lg-5 col-12">
+          <p> <strong>Téléphone :</strong> <br> ${user.phone}</p>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 offset-lg-5 col-12">
-        <p> <strong>Description :</strong> <br> ${user.message}</p>
+      <div class="row">
+        <div class="col-lg-6 offset-lg-5 col-12">
+          <p> <strong>Description :</strong> <br> ${user.message}</p>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 offset-lg-5 col-12">
-        <button type="button" class="btn btn-primary sendButton">Contacter</button>
+      <div class="row">
+        <div class="col-lg-6 offset-lg-5 col-12">
+          <button type="button" class="btn btn-primary sendButton">Contacter</button>
+        </div>
       </div>
-    </div>
     </div>
   </div>
   `

@@ -14,15 +14,19 @@ export const createNavbarElement = () =>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="eventsList.html">Dernière parties <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="eventsList.html">Dernières parties <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="newEvent.html">Créer un évènement <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="newEvent.html">Créez un évènement <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
-        <button><a class="nav-link" href="login.html">Inscription/Connexion <span class="sr-only">(current)</span></a></button>
+<<<<<<< HEAD
+        <button type="button" class="btn btn-lg btn-outline-info"<a class="nav-link" href="login.html">Inscription/Connexion <span class="sr-only">(current)</span></a></button>
+=======
+        <button><a class="nav-link button-collapse" href="login.html">Inscription/Connexion <span class="sr-only">(current)</span></a></button>
+>>>>>>> 4164eb0a7ddca6bb4486396bd22959648d6c80f1
       </li>
     </ul>
     </div>

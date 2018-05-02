@@ -63,3 +63,15 @@ input {
 .center {
     text-align: left
 }
+
+/*.btn-submit {
+    display: flex;
+    justify-content: center;
+}
+*/
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -9,7 +9,7 @@ export const createEventElement = event => `
     </div>
   </div>
   `
-       // L4 <a href="scheduledEvent.html?id=${event.id}" >
+// L4 <a href="scheduledEvent.html?id=${event.id}" >
 
 // export const createEventDetailElement = event => `
 //   <div class="event">

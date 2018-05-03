@@ -1,4 +1,4 @@
-export const createUserElement = user =>`
+export const createUserElement = user => `
   <div class= "row ml-5" >
     <div class="col-1">
       <a href="profil.html?id=${user.id}" >

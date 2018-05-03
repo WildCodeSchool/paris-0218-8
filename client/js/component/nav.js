@@ -27,6 +27,3 @@ export const createNavbarElement = () =>
     </ul>
     </div>
 </nav>`
-
-
-// export const createFootbarElement = () =>

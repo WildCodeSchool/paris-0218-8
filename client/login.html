@@ -16,26 +16,22 @@
 <body>
     <header id="navDyn"></header>
     <hr>
-    <form>
+    <form id="sign-in-form">
         <h1>Connexion</h1>
         <div class="container">
             <div class="row">
                 <div class="jumbotron offset-3 col-6 col-md-3 col-lg-6">
                     <div class="form-group offset-3 col-6">
                         <label for="exampleInputEmail1">Entrez votre adresse mail :</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Adresse mail">
+                        <input name="mail" type="email" class="form-control" id="signin-mail" aria-describedby="emailHelp" placeholder="Adresse mail">
                         <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group offset-3 col-6">
                         <label for="exampleInputPassword1">Entrez votre mot de passe :</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
-                    </div>
-                    <div class="form-check  offset-6 col-6">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
+                        <input name="password" type="password" class="form-control" id="signin-password" placeholder="Mot de passe">
                     </div>
                     <div class="form-check offset-7 col-6">
-                        <button type="submit" class="btn btn-info btn-lg">Envoyez</button>
+                        <button type="submit" value="post" class="btn btn-info btn-lg">Envoyez</button>
                     </div>
                 </div>
             </div>
@@ -101,7 +97,7 @@
                         <div class="row">
                             <div class="form-group col-lg">
                                 <label for="exampleFormControlFile1">Photo de profil
-                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    <input type="file" class="form-control-file" id="photo">
                                 </label>
                             </div>
                             <p class="col-6">
@@ -113,8 +109,8 @@
                         </div>
                         <div class="row">
                                 <div class="form-group col col-md-6 col-lg-12">
-                                    <label for="exampleFormControlTextarea1">Biographie</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Parlez-nous un peu de vous..."></textarea>
+                                    <label for="e">Biographie</label>
+                                        <textarea class="form-control" id="message" rows="3" placeholder="Parlez-nous un peu de vous..."></textarea>
                                 </div>
                             </p>
                             <p class="form-group col-lg">

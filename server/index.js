@@ -19,15 +19,36 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use((request, response, next) => {
   response.header('Access-Control-Allow-Origin', request.headers.origin)
-  response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   response.header('Access-Control-Allow-Credentials', 'true') // important
+  response.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE') // important
+  response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
+
+//important pour l'affichage des data des users
+app.use((request, response, next) => {
+  if (request.method !== 'POST' && request.method !== 'PUT') return next()
+  let accumulator = ''
+
+  request.on('data', data => {
+    accumulator += data
+  })
+
+  request.on('end', () => {
+    try {
+      request.body = accumulator ? JSON.parse(accumulator) : {}
+      next()
+    } catch (err) {
+      next(err)
+    }
+  })
+})
+
 
 // Setup session handler
 app.use(session({
   secret,
-  saveUninitialized: false,
+  saveUninitialized: true,
   resave: true,
   store: new FileStore({ secret })
 }))
@@ -36,16 +57,14 @@ app.use(session({
 // const filepath = path.join(__dirname, './mock/users/', filename)
 
 // Users (hard coded here but consider it comes from database)
-const users = [
-  { login: 'bertrand', password: 'azerty123' },
-  { login: 'martine', password: 'rosedamour' }
-]
 
 // Logger middleware
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.url}`, { user: req.session.user, cookie: req.headers.cookie })
   next()
 })
+
+// ROUTES
 
 app.get('/', (req, res) => {
   const user = req.session.user || {}
@@ -54,16 +73,22 @@ app.get('/', (req, res) => {
 })
 
 app.post('/sign-in', (req, res, next) => {
+  console.log("sign-in start in")
+
+  const users = [
+  { login: 'bertrand@gmail.com', password: 'azerty123' },
+  { login: 'martine@gmail.com', password: 'rosedamour' }
+  ]
   // does user exists ?
   const user = users.find(u => req.body.login === u.login)
 
   // Error handling
   if (!user) {
-    return res.json({ error: 'User not found' })
+    return next(Error('User not found'))
   }
 
   if (user.password !== req.body.password) {
-    return res.json({ error: 'Wrong password' })
+    return next(Error('Wrong password'))
   }
 
   // else, set the user into the session
@@ -76,40 +101,6 @@ app.get('/sign-out', (req, res, next) => {
   req.session.user = {}
 
   res.json('ok')
-})
-
-app.use((err, req, res, next) => {
-  if (err) {
-    res.json({ message: err.message })
-    console.error(err)
-  }
-
-  next(err)
-})
-
-app.use((request, response, next) => {
-  if (request.method === 'GET') return next()
-  let accumulator = ''
-  request.on('data', data => {
-    accumulator += data
-  })
-  request.on('end', () => {
-    try {
-      request.body = JSON.parse(accumulator)
-      next()
-    } catch (err) {
-      next(err)
-    }
-  })
-})
-
-app.use((request, response, next) => {
-  console.log(request.url)
-  next()
-})
-
-app.get('/', (request, response) => {
-  response.send('OK')
 })
 
 app.post('/signup', (request, response, next) => {
@@ -129,13 +120,14 @@ app.post('/signup', (request, response, next) => {
     phone: body.phone,
     message: body.message,
     photo: `https://randomuser.me/api/portraits/${n & 1 ? 'wo' : ''}men/${n}.jpg`
-
   }
 
   writeFile(filepath, JSON.stringify(user, null, 2), 'utf8')
     .then(() => response.json('OK'))
     .catch(next)
 })
+
+
 
 app.post('/newevent', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(11, '0')
@@ -221,5 +213,19 @@ app.get('/eventsList/:id', (request, response) => {
       response.status(404).end('event not found')
     })
 })
+
+
+// ERROR HANDLING MIDDLEWARE
+
+app.use((err, req, res, next) => {
+  if (err) {
+    res.json({ message: err.message })
+    console.error(err)
+    return
+  }
+
+  next(err)
+})
+
 
 app.listen(8080, () => console.log('Listening to 8080 port'))

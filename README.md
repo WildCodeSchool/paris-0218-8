@@ -24,7 +24,7 @@ This website allows you to organize or participate to game play (board games, ca
 
 **#About us**
 
-Members of the project : Nadia Djellali, Pany Soukaloun, Smain Khaldi, Valéry Chin
+Members of the project : Nadia Djellali, Smain Khaldi, Valéry Chin
 
 Name of the team  : The loop4
 
